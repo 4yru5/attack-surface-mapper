@@ -4,27 +4,32 @@ Attack Surface Mapper (ASM) is an application understanding engine designed to h
 
 ## Current Features
 
-() Framework Detection
+✅ Framework Detection
 
-() Route Discovery
+✅ Route Discovery
 
-() Authentication Discovery
+✅ Authentication Discovery
 
-() External Service Discovery
+✅ External Service Discovery
 
-() Attack Surface Report Generation
+✅ Attack Surface Report Generation
 
 ## Architecture
 
 Repository
+
     ↓
 Framework Detection
+
     ↓
 Route Discovery
+
     ↓
 Authentication Discovery
+
     ↓
 Service Discovery
+
     ↓
 Attack Surface Report
 
