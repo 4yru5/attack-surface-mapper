@@ -9,7 +9,9 @@ from detectors.upload_detector import discover_upload_routes
 from detectors.database_detector import discover_databases
 from detectors.env_detector import discover_env_vars
 from detectors.risk_classifier import calculate_risk
+from detectors.graph_builder import build_attack_graph
 from utils.report_generator import generate_report
+
 
 def main(repo_path):
 
@@ -31,11 +33,20 @@ def main(repo_path):
 
     env_vars = discover_env_vars(repo_path)
 
+    attack_graph = build_attack_graph(
+        routes,
+        admin_routes,
+        upload_routes,
+        databases,
+        services
+    )
+
     risk_scores = calculate_risk(
         routes,
         admin_routes,
         upload_routes,
-        databases
+        databases,
+        services
     )
 
     report = generate_report(
@@ -47,7 +58,8 @@ def main(repo_path):
         env_vars=env_vars,
         admin_routes=admin_routes,
         upload_routes=upload_routes,
-        risk_scores=risk_scores
+        risk_scores=risk_scores,
+        attack_graph=attack_graph
     )
 
     print(report)

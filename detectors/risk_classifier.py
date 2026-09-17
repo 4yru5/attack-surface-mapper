@@ -2,7 +2,8 @@ def calculate_risk(
     routes,
     admin_routes,
     upload_routes,
-    databases
+    databases,
+    services
 ):
 
     results = []
@@ -11,16 +12,19 @@ def calculate_risk(
 
         score = 0
 
+        method = route["method"]
         path = route["path"]
 
+        route_id = f"{method} {path}"
+
         if any(
-            path == r["path"]
+            route_id == f"{r['method']} {r['path']}"
             for r in admin_routes
         ):
             score += 3
 
         if any(
-            path == r["path"]
+            route_id == f"{r['method']} {r['path']}"
             for r in upload_routes
         ):
             score += 4
@@ -28,8 +32,11 @@ def calculate_risk(
         if databases:
             score += 2
 
+        if services:
+            score += 1
+
         results.append({
-            "path": path,
+            "route": route_id,
             "score": score
         })
 

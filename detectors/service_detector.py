@@ -3,11 +3,9 @@ import os
 
 SERVICE_MAP = {
     "stripe": "Stripe",
-    "redis": "Redis",
     "aws-sdk": "AWS",
     "mongodb": "MongoDB",
-    "mongoose": "MongoDB",
-    "pg": "PostgreSQL"
+    "mongoose": "MongoDB"
 }
 
 

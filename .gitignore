@@ -1,3 +1,21 @@
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# VS Code
+.vscode/
+
+venv/
+.venv/
+env/
+
+
+.env
+.env.local
+
+
+*.log
+
+
 reports/latest_report.md

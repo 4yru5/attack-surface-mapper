@@ -10,7 +10,8 @@ def generate_report(
     env_vars,
     admin_routes,
     upload_routes,
-    risk_scores
+    risk_scores,
+    attack_graph
 ):
 
     report = []
@@ -184,7 +185,8 @@ def generate_report(
         for risk in risk_scores[:10]:
 
             report.append(
-                f"- {risk['path']} (Score: {risk['score']})"
+                f" - {risk['route']} "
+                f" (Score: {risk['score']})"
             )
 
     else:
@@ -194,6 +196,20 @@ def generate_report(
     report.append("")
     report.append("---")
     report.append("")
+
+    report.append("")
+    report.append("## Attack Surface Graph")
+    report.append("")
+
+    for edge in attack_graph:
+
+        report.append(
+        f"- {edge['source']} -> "
+        f"{edge['target']} "
+        f"({edge['relationship']})"
+    )
+
+    report.append("") 
 
     # Summary
 
