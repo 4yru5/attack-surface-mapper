@@ -1,25 +1,52 @@
-import os
-
-
 def analyze_reachability(
-    attack_paths
+    attack_paths,
+    functions,
+    calls
 ):
 
-    results = []
+    reachability = []
 
     for path in attack_paths:
 
-        results.append({
+        reachable = False
+
+        file_path = path["file"]
+
+        file_calls = [
+
+            call["call"]
+
+            for call in calls
+
+            if call["file"] == file_path
+        ]
+
+        file_functions = [
+
+            func["function"]
+
+            for func in functions
+
+            if func["file"] == file_path
+        ]
+
+        for function_name in file_functions:
+
+            if function_name in file_calls:
+
+                reachable = True
+
+        reachability.append({
 
             "source": path["source"],
 
             "sink": path["sink"],
 
-            "file": path["file"],
+            "risk": path["risk"],
 
-            "reachable": True,
+            "file": file_path,
 
-            "risk": path["risk"]
+            "reachable": reachable
         })
 
-    return results
+    return reachability

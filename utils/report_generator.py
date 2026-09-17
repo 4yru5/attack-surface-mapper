@@ -13,7 +13,9 @@ def generate_report(
     risk_scores,
     attack_graph,
     attack_paths,
-    reachability
+    reachability,
+    functions,
+    calls
 ):
 
     report = []
@@ -87,7 +89,7 @@ def generate_report(
     report.append(
     f"- Authentication Technologies: {len(unique_auth)}"
     )
-
+    report.append("")
     # Services
 
     report.append("## External Services")
@@ -274,37 +276,49 @@ def generate_report(
     report.append("## Reachability Analysis")
     report.append("")
 
-    for index, item in enumerate(
-        reachability,
-        start=1
-    ):
+    for index, item in enumerate(reachability,start=1):
 
         report.append(
         f"### Reachability {index}"
     )
 
-    report.append("")
+        report.append("")
 
-    report.append(
-        f"Source: {item['source']}"
-    )
+        report.append(
+            f"Source: {item['source']}"
+        )
 
-    report.append(
-        f"Sink: {item['sink']}"
-    )
+        report.append(
+            f"Sink: {item['sink']}"
+        )
 
-    report.append(
-        f"Reachable: {item['reachable']}"
-    )
+        report.append(
+            f"Reachable: {item['reachable']}"
+        )
 
-    report.append(
-        f"Risk: {item['risk']}"
-    )
+        report.append(
+            f"Risk: {item['risk']}"
+        )
 
-    report.append("")
+        report.append("")
 
-    report.append(
+        report.append(
         "----------------------------"
+        )
+
+
+    report.append("")
+    report.append("## Function Flow Analysis")
+    report.append("")
+
+    report.append(
+    f"Functions Discovered: "
+    f"{len(functions)}"
+    )
+
+    report.append(
+    f"Function Calls Discovered: "
+    f"{len(calls)}"
     )
 
     report.append("")

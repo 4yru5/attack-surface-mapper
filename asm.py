@@ -14,6 +14,8 @@ from detectors.source_detector import discover_sources
 from detectors.sink_detector import discover_sinks
 from detectors.attack_path_generator import generate_attack_paths
 from detectors.reachability_analyzer import analyze_reachability
+from detectors.function_detector import discover_functions
+from detectors.call_detector import discover_function_calls
 from utils.report_generator import generate_report
 
 
@@ -50,7 +52,15 @@ def main(repo_path):
 
     attack_paths = generate_attack_paths(sources,sinks)
 
-    reachability = analyze_reachability(attack_paths)
+    functions = discover_functions(repo_path)
+
+    calls = discover_function_calls(repo_path)
+
+    reachability = analyze_reachability(
+        attack_paths,
+        functions,
+        calls
+    )
 
     risk_scores = calculate_risk(
         routes,
@@ -72,7 +82,9 @@ def main(repo_path):
         risk_scores=risk_scores,
         attack_graph=attack_graph,
         attack_paths=attack_paths,
-        reachability=reachability
+        reachability=reachability,
+        functions=functions,
+        calls=calls
     )
 
     print(report)
