@@ -1,17 +1,43 @@
-# Day 2
+# Day 02
 
-Goal:
-Route Discovery
+## Goal
 
-Completed:
-- GET Route Detection
-- POST Route Detection
+Extend ASM beyond application discovery and start identifying security-relevant attack surfaces.
 
-Discovered:
-Express routes are relatively easy to parse.
+## Completed
 
-Limitations:
-Middleware chains are not yet detected.
+- Admin Endpoint Discovery
+- Upload Endpoint Discovery
+- Database Discovery
+- Environment Variable Discovery
+- Risk Classification Engine
 
-Next:
-Authentication Discovery
+## Example Findings
+
+Admin Routes:
+- GET /admin
+- DELETE /admin/user/:id
+
+Upload Routes:
+- POST /upload/image
+- POST /upload/document
+
+Environment Variables:
+- DATABASE_URL
+- JWT_SECRET
+- AWS_ACCESS_KEY
+- STRIPE_SECRET_KEY
+
+## Learnings
+
+Application understanding requires more than route enumeration.
+
+High-risk surfaces can be identified using contextual security signals.
+
+## Next
+
+Attack Surface Graph
+
+Attack Path Generation
+
+Reachability Analysis
