@@ -11,7 +11,9 @@ def generate_report(
     admin_routes,
     upload_routes,
     risk_scores,
-    attack_graph
+    attack_graph,
+    attack_paths,
+    reachability
 ):
 
     report = []
@@ -63,22 +65,28 @@ def generate_report(
 
     # Authentication
 
-    report.append("## Authentication Indicators")
-    report.append("")
 
-    if auth_data:
-
-        for auth in auth_data:
-
-            report.append(
-                f"- {auth['indicator']} ({auth['file']})"
-            )
-
-    else:
-
-        report.append("- None Found")
+    unique_auth = sorted(
+    {
+    item["indicator"]
+    for item in auth_data
+    }
+    )
 
     report.append("")
+    report.append("## Authentication Technologies")
+    report.append("")
+
+    unique_auth = sorted(
+    {
+    item["indicator"]
+    for item in auth_data
+    }
+    )
+
+    report.append(
+    f"- Authentication Technologies: {len(unique_auth)}"
+    )
 
     # Services
 
@@ -204,12 +212,102 @@ def generate_report(
     for edge in attack_graph:
 
         report.append(
-        f"- {edge['source']} -> "
-        f"{edge['target']} "
-        f"({edge['relationship']})"
-    )
+            f"- {edge['source']} -> "
+            f"{edge['target']} "
+            f"({edge['relationship']})"
+        )
 
     report.append("") 
+
+    report.append("")
+    report.append("## Attack Paths")
+    report.append("")
+
+    if attack_paths:
+
+        for index, path in enumerate(
+            attack_paths,
+            start=1
+        ):
+
+            report.append(
+                f"### Path {index}"
+            )
+
+            report.append("")
+
+            report.append(
+                f"Source: {path['source']}"
+            )
+
+            report.append(
+                f"Sink: {path['sink']}"
+            )
+
+            report.append(
+                f"File: {path['file']}"
+            )
+
+            report.append(
+                f"Potential Risk: {path.get('risk', 'Unknown')}"
+            )
+
+            report.append("")
+
+            report.append(
+                "----------------------------"
+            )
+
+            report.append("")
+
+    else:
+
+        report.append(
+            "No attack paths discovered."
+        )
+
+    report.append("")
+
+    report.append("")
+
+    report.append("")
+    report.append("## Reachability Analysis")
+    report.append("")
+
+    for index, item in enumerate(
+        reachability,
+        start=1
+    ):
+
+        report.append(
+        f"### Reachability {index}"
+    )
+
+    report.append("")
+
+    report.append(
+        f"Source: {item['source']}"
+    )
+
+    report.append(
+        f"Sink: {item['sink']}"
+    )
+
+    report.append(
+        f"Reachable: {item['reachable']}"
+    )
+
+    report.append(
+        f"Risk: {item['risk']}"
+    )
+
+    report.append("")
+
+    report.append(
+        "----------------------------"
+    )
+
+    report.append("")
 
     # Summary
 

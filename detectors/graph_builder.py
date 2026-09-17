@@ -12,14 +12,14 @@ def build_attack_graph(
 
         graph.append({
             "source": "Internet",
-            "target": route["path"],
+            "target": f"{route['method']} {route['path']}",
             "relationship": "reachable"
         })
 
     for route in admin_routes:
 
         graph.append({
-            "source": route["path"],
+            "source": f"{route['method']} {route['path']}",
             "target": "Authentication",
             "relationship": "requires"
         })
@@ -27,7 +27,7 @@ def build_attack_graph(
     for route in upload_routes:
 
         graph.append({
-            "source": route["path"],
+            "source": f"{route['method']} {route['path']}",
             "target": "File Storage",
             "relationship": "uploads_to"
         })
