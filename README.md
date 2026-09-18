@@ -58,7 +58,7 @@ Output:
 
 Framework: Express
 
-Routes Found: 35
+Routes Found: 37
 
 Admin Routes: 4
 
