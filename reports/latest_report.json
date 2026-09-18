@@ -73,6 +73,143 @@
             "risk": "Potential SSRF"
         }
     ],
+    "reachability": [
+        {
+            "source": "req.body.command",
+            "sink": "exec(",
+            "risk": "Potential Command Injection",
+            "file": "examples/realistic-app/services/export.js",
+            "reachable": false
+        },
+        {
+            "source": "req.body.command",
+            "sink": "exec(",
+            "risk": "Potential Command Injection",
+            "file": "examples/realistic-app/services/chained_exec.js",
+            "reachable": true
+        },
+        {
+            "source": "req.body.url",
+            "sink": "axios.get(",
+            "risk": "Potential SSRF",
+            "file": "examples/realistic-app/services/chained_webhook.js",
+            "reachable": true
+        },
+        {
+            "source": "req.body.url",
+            "sink": "axios.get(",
+            "risk": "Potential SSRF",
+            "file": "examples/realistic-app/services/webhook.js",
+            "reachable": false
+        },
+        {
+            "source": "req.body.url",
+            "sink": "axios.get(",
+            "risk": "Potential SSRF",
+            "file": "examples/realistic-app/services/dataflow.js",
+            "reachable": true
+        }
+    ],
+    "tainted_variables": [
+        {
+            "file": "examples/realistic-app/controllers/webhookController.js",
+            "variable": "url"
+        },
+        {
+            "file": "examples/realistic-app/services/export.js",
+            "variable": "command"
+        }
+    ],
+    "function_definitions": [
+        {
+            "name": "authMiddleware",
+            "parameters": [
+                "req",
+                "res",
+                "next"
+            ],
+            "file": "examples/realistic-app/middleware/auth.js"
+        },
+        {
+            "name": "authenticate",
+            "parameters": [
+                "req",
+                "res",
+                "next"
+            ],
+            "file": "examples/realistic-app/middleware/auth.js"
+        },
+        {
+            "name": "processWebhook",
+            "parameters": [
+                "req"
+            ],
+            "file": "examples/realistic-app/controllers/webhookController.js"
+        },
+        {
+            "name": "runCommand",
+            "parameters": [
+                "req"
+            ],
+            "file": "examples/realistic-app/services/export.js"
+        },
+        {
+            "name": "runCommand",
+            "parameters": [
+                "command"
+            ],
+            "file": "examples/realistic-app/services/chained_exec.js"
+        },
+        {
+            "name": "exportData",
+            "parameters": [
+                "req"
+            ],
+            "file": "examples/realistic-app/services/chained_exec.js"
+        },
+        {
+            "name": "sendRequest",
+            "parameters": [
+                "data"
+            ],
+            "file": "examples/realistic-app/services/chained_webhook.js"
+        },
+        {
+            "name": "processWebhook",
+            "parameters": [
+                "req"
+            ],
+            "file": "examples/realistic-app/services/chained_webhook.js"
+        },
+        {
+            "name": "triggerWebhook",
+            "parameters": [
+                "req"
+            ],
+            "file": "examples/realistic-app/services/webhook.js"
+        },
+        {
+            "name": "send",
+            "parameters": [
+                "data"
+            ],
+            "file": "examples/realistic-app/services/webhookService.js"
+        },
+        {
+            "name": "sendRequest",
+            "parameters": [
+                "data"
+            ],
+            "file": "examples/realistic-app/services/dataflow.js"
+        },
+        {
+            "name": "processWebhook",
+            "parameters": [
+                "req"
+            ],
+            "file": "examples/realistic-app/services/dataflow.js"
+        }
+    ],
     "parameter_mappings": [
         {
             "source": "url",
@@ -114,6 +251,50 @@
             "source": "validated",
             "sink": "axios.get",
             "via": "data"
+        }
+    ],
+    "call_graph": [
+        {
+            "file": "examples/realistic-app/controllers/webhookController.js",
+            "caller": "processWebhook",
+            "callee": "send",
+            "caller_file": "webhookController"
+        },
+        {
+            "file": "examples/realistic-app/services/export.js",
+            "caller": "runCommand",
+            "callee": "exec",
+            "caller_file": "export"
+        },
+        {
+            "file": "examples/realistic-app/services/chained_exec.js",
+            "caller": "runCommand",
+            "callee": "exec",
+            "caller_file": "chained_exec"
+        },
+        {
+            "file": "examples/realistic-app/services/chained_exec.js",
+            "caller": "exportData",
+            "callee": "runCommand",
+            "caller_file": "chained_exec"
+        },
+        {
+            "file": "examples/realistic-app/services/chained_webhook.js",
+            "caller": "processWebhook",
+            "callee": "sendRequest",
+            "caller_file": "chained_webhook"
+        },
+        {
+            "file": "examples/realistic-app/services/dataflow.js",
+            "caller": "processWebhook",
+            "callee": "sanitize",
+            "caller_file": "dataflow"
+        },
+        {
+            "file": "examples/realistic-app/services/dataflow.js",
+            "caller": "processWebhook",
+            "callee": "sendRequest",
+            "caller_file": "dataflow"
         }
     ]
 }

@@ -204,6 +204,15 @@ def main(repo_path):
 
     os.makedirs("reports", exist_ok=True)
 
+    with open(
+        "reports/latest_report.md",
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+         f.write(report)
+
+
     json_report = {
 
     "framework":
@@ -215,6 +224,15 @@ def main(repo_path):
     "attack_paths":
     attack_paths,
 
+    "reachability":
+    reachability,
+
+    "tainted_variables":
+    tainted_variables,
+
+    "function_definitions":
+    function_definitions,
+
     "parameter_mappings":
     parameter_mappings,
 
@@ -222,7 +240,10 @@ def main(repo_path):
     internal_sink_flows,
 
     "end_to_end_flows":
-    end_to_end_flows
+    end_to_end_flows,
+
+    "call_graph":
+    calls
 
     }
 
@@ -241,6 +262,9 @@ def main(repo_path):
     print(
         "\n✅ Report saved to reports/latest_report.md"
     )
+    print(
+            "\n✅ JSON saved to reports/latest_report.json"
+        )
 if __name__ == "__main__":
 
     import sys
