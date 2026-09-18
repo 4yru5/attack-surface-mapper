@@ -6,37 +6,94 @@ def propagate_taint(
 
     chains = []
 
-    tainted_names = {
+    seen = set()
+
+    tainted = {
+
         item["variable"]
+
         for item in tainted_variables
+
     }
 
-    for flow in variable_flows:
+    changed = True
 
-        if flow["source"] in tainted_names:
+    while changed:
 
-            chains.append({
+        changed = False
 
-                "source": flow["source"],
+        #
+        # Variable propagation
+        #
 
-                "target": flow["target"],
+        for flow in variable_flows:
 
-                "type": "variable_flow"
-            })
+            source = flow["source"]
 
-    for call in argument_flows:
+            target = flow["target"]
 
-        for tainted in tainted_names:
+            if source in tainted:
 
-            if call["argument"] == tainted:
+                key = (
+                    source,
+                    target,
+                    "variable_flow"
+                )
 
-                chains.append({
+                if key not in seen:
 
-                    "source": tainted,
+                    seen.add(key)
 
-                    "target": call["function"],
+                    chains.append({
 
-                    "type": "function_call"
-                })
+                        "source": source,
+
+                        "target": target,
+
+                        "type": "variable_flow"
+
+                    })
+
+                #
+                # Mark target as tainted
+                #
+
+                if target not in tainted:
+
+                    tainted.add(target)
+
+                    changed = True
+
+        #
+        # Function propagation
+        #
+
+        for call in argument_flows:
+
+            argument = call["argument"]
+
+            function_name = call["function"]
+
+            if argument in tainted:
+
+                key = (
+                    argument,
+                    function_name,
+                    "function_call"
+                )
+
+                if key not in seen:
+
+                    seen.add(key)
+
+                    chains.append({
+
+                        "source": argument,
+
+                        "target": function_name,
+
+                        "type": "function_call"
+
+                    })
 
     return chains

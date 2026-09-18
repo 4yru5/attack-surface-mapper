@@ -1,6 +1,4 @@
-const service = require(
-    "../services/webhookService"
-);
+const service = require("../services/webhookService");
 
 function processWebhook(req){
 

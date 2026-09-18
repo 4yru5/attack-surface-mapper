@@ -22,7 +22,7 @@ from detectors.variable_tracker import discover_variable_flows
 from detectors.arguement_tracker import discover_argument_flows
 from detectors.taint_propagation import propagate_taint
 from detectors.import_tracker import discover_imports
-from detectors.export_tracker import discover_exports
+from detectors.export_tracker import discover_js_files
 from detectors.cross_file_mapper import map_cross_file_flows
 from detectors.cross_file_reachability import analyze_cross_file_reachability
 from utils.report_generator import generate_report
@@ -97,29 +97,33 @@ def main(repo_path):
 
     imports = discover_imports(repo_path)
 
-    exports = discover_exports(repo_path)
+    print("\nIMPORT COUNT:", len(imports))
 
-    relationships = map_cross_file_flows(imports,exports)
-
-    print("\nIMPORTS")
     for item in imports:
         print(item)
 
-    print("\nEXPORTS")
-    for item in exports:
-        print(exports)
-    
+    print("\nRAW IMPORTS")
+    for x in imports:
+        print(x)
 
-    print("\nRELATIONSHIPS")
-    for item in relationships:
-        print(relationships)
-    print("\n")
+    js_files = discover_js_files(repo_path)
+
+    relationships = map_cross_file_flows(imports,js_files)
 
     cross_file_results = \
         analyze_cross_file_reachability(
             attack_paths,
             relationships
         )
+
+    print("\n===== IMPORTS =====")
+    print(imports)
+
+    print("\n===== JS FILES =====")
+    print(js_files)
+
+    print("\n===== RELATIONSHIPS =====")
+    print(relationships)
 
     report = generate_report(
         framework_data=framework_data,
@@ -158,8 +162,6 @@ def main(repo_path):
     print(
         "\n✅ Report saved to reports/latest_report.md"
     )
-
-
 if __name__ == "__main__":
 
     import sys

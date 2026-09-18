@@ -1,12 +1,12 @@
 const axios = require("axios");
 
-function sendRequest(data){
+function sendRequest(data) {
 
     return axios.get(data);
 
 }
 
-function processWebhook(req){
+function processWebhook(req) {
 
     const url = req.body.url;
 
@@ -15,3 +15,7 @@ function processWebhook(req){
     return sendRequest(validated);
 
 }
+
+module.exports = {
+    processWebhook
+};

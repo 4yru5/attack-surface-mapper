@@ -1,9 +1,13 @@
 const axios = require("axios");
 
-async function webhook(req){
+function triggerWebhook(req) {
 
-    return axios.get(
-        req.body.url
-    );
+    const url = req.body.url;
+
+    return axios.get(url);
 
 }
+
+module.exports = {
+    triggerWebhook
+};

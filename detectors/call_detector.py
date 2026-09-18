@@ -2,46 +2,78 @@ import os
 import re
 
 CALL_PATTERN = re.compile(
-    r'([a-zA-Z0-9_]+)\('
+    r'([a-zA-Z_][a-zA-Z0-9_]*)\s*\('
 )
 
+EXCLUDED = {
 
-def discover_function_calls(
-    repo_path
-):
+    "if",
+    "for",
+    "while",
+    "switch",
+    "catch",
+    "require",
+    "function",
+    "return"
+
+}
+
+
+def discover_function_calls(repo_path):
 
     calls = []
+    seen = set()
 
     for root, _, files in os.walk(repo_path):
 
         for file in files:
 
-            if file.endswith((".js", ".ts")):
+            if not file.endswith((".js", ".ts")):
+                continue
 
-                path = os.path.join(root, file)
+            file_path = os.path.join(
+                root,
+                file
+            )
 
-                try:
+            try:
 
-                    content = open(
-                        path,
-                        "r",
-                        encoding="utf-8"
-                    ).read()
+                with open(
+                    file_path,
+                    "r",
+                    encoding="utf-8"
+                ) as f:
 
-                    matches = CALL_PATTERN.findall(
-                        content
+                    content = f.read()
+
+                matches = CALL_PATTERN.findall(
+                    content
+                )
+
+                for function_name in matches:
+
+                    if function_name in EXCLUDED:
+                        continue
+
+                    key = (
+                        file_path,
+                        function_name
                     )
 
-                    for match in matches:
+                    if key in seen:
+                        continue
 
-                        calls.append({
+                    seen.add(key)
 
-                            "file": path,
+                    calls.append({
 
-                            "call": match
-                        })
+                        "file": file_path,
 
-                except Exception:
-                    pass
+                        "call": function_name
+
+                    })
+
+            except Exception:
+                pass
 
     return calls

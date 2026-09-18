@@ -1,32 +1,70 @@
 import os
 
-
 def map_cross_file_flows(
     imports,
-    exports
+    js_files
 ):
 
     relationships = []
+    seen = set()
 
     for imp in imports:
 
-        required_name = os.path.basename(
-            imp["required_path"]
+        import_path = imp["import_path"]
+
+        if not import_path.startswith("."):
+            continue
+
+        imported_name = os.path.basename(
+            import_path
+        )
+        
+        imported_name = imported_name.replace(
+            ".js",
+            ""
         )
 
-        for exp in exports:
+        for js_file in js_files:
 
-            export_name = os.path.basename(
-                exp["file"]
+            js_name = os.path.basename(
+                js_file
             ).replace(".js", "")
 
-            if required_name == export_name:
+            if imported_name != js_name:
+                continue
+
+            if imported_name == js_name:
+
+                key = (
+                    imp["source_file"],
+                    js_file
+                )
+
+                print(
+                    "COMPARE:",
+                    imported_name,
+                    "vs",
+                    js_name
+                )
+
+                if imported_name == js_name:
+
+                    print(
+                        "MATCH FOUND!"
+                    )
+
+                if key in seen:
+                    continue
+
+                seen.add(key)
 
                 relationships.append({
 
-                    "caller": imp["file"],
+                    "caller":
+                    imp["source_file"],
 
-                    "callee": exp["file"]
+                    "callee":
+                    js_file
 
                 })
 

@@ -361,22 +361,27 @@ def generate_report(
     report.append("## Reachability v3")
     report.append("")
 
-    for item in dataflow_results:
+    report.append(
+        "Status: Experimental"
+    )
 
-        report.append(
-            f"Source: {item['source']}"
-        )
+    report.append(
+        "Variable tracking available"
+    )
 
-        report.append(
-            f"Sink: {item['sink']}"
-        )
+    report.append(
+        "Taint propagation available"
+    )
 
-        report.append(
-            f"Reachable: {item['reachable']}"
-        )
+    report.append(
+        "Function definition tracking pending"
+    )
+
+    report.append(
+        "Parameter mapping pending"
+    )
 
     report.append("")
-
     report.append("")
     report.append("## Taint Propagation")
     report.append("")

@@ -2,11 +2,12 @@ import os
 import re
 
 IMPORT_PATTERN = re.compile(
-    r'require\(.+?["\']\)'
+    r'require\("([^"]+)"\)'
 )
 
-
 def discover_imports(repo_path):
+
+    print("\n[DEBUG] discover_imports called")
 
     imports = []
 
@@ -17,33 +18,56 @@ def discover_imports(repo_path):
             if not file.endswith(".js"):
                 continue
 
-            file_path = os.path.join(
-                root,
-                file
-            )
+            file_path = os.path.join(root, file)
 
             try:
 
-                content = open(
+                with open(
                     file_path,
+                    "r",
                     encoding="utf-8"
-                ).read()
+                ) as f:
 
-                matches = IMPORT_PATTERN.findall(
+                    content = f.read()
+
+                print("\nREPR CONTENT:")
+                print(repr(content))
+
+                test1 = re.findall(
+                    r'require\("([^"]+)"\)',
                     content
                 )
+
+                print("TEST1:", test1)
+
+                print("\n====================")
+                print("FILE:", file_path)
+                print("====================")
+                print(content)
+
+                matches = re.findall(
+                    r'require\("([^"]+)"\)',
+                    content
+                )
+
+                print("MATCHES:", matches)
 
                 for match in matches:
 
                     imports.append({
 
-                        "file": file_path,
+                        "source_file": file_path,
 
-                        "required_path": match
+                        "import_path": match
 
                     })
 
-            except Exception:
-                pass
+            except Exception as e:
+
+                print(
+                    "ERROR:",
+                    file_path,
+                    str(e)
+                )
 
     return imports

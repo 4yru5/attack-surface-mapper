@@ -2,7 +2,7 @@ import os
 import re
 
 CALL_PATTERN = re.compile(
-    r'([a-zA-Z0-9_]+)\(([a-zA-Z0-9_]+)\)'
+    r'([a-zA-Z0-9_\.]+)\s*\(\s*([a-zA-Z0-9_]+)\s*\)'
 )
 
 
@@ -14,35 +14,38 @@ def discover_argument_flows(repo_path):
 
         for file in files:
 
-            if file.endswith((".js", ".ts")):
+            if not file.endswith((".js", ".ts")):
+                continue
 
-                file_path = os.path.join(root, file)
+            path = os.path.join(root, file)
 
-                try:
+            try:
 
-                    content = open(
-                        file_path,
-                        "r",
-                        encoding="utf-8"
-                    ).read()
+                with open(
+                    path,
+                    "r",
+                    encoding="utf-8"
+                ) as f:
 
-                    matches = CALL_PATTERN.findall(
-                        content
-                    )
+                    content = f.read()
 
-                    for function, argument in matches:
+                matches = CALL_PATTERN.findall(
+                    content
+                )
 
-                        flows.append({
+                for function_name, argument in matches:
 
-                            "file": file_path,
+                    flows.append({
 
-                            "function": function,
+                        "file": path,
 
-                            "argument": argument
+                        "function": function_name,
 
-                        })
+                        "argument": argument
 
-                except Exception:
-                    pass
+                    })
+
+            except Exception:
+                pass
 
     return flows

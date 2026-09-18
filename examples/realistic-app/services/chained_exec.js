@@ -1,18 +1,19 @@
-const { exec } = require(
-    "child_process"
-);
+const { exec } = require("child_process");
 
-function runCommand(data){
+function runCommand(command) {
 
-    exec(data);
+    exec(command);
 
 }
 
-function processExport(req){
+function exportData(req) {
 
-    const command =
-        req.body.command;
+    const command = req.body.command;
 
     runCommand(command);
 
 }
+
+module.exports = {
+    exportData
+};

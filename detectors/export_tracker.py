@@ -1,8 +1,8 @@
 import os
 
-def discover_exports(repo_path):
+def discover_js_files(repo_path):
 
-    exports = []
+    files_found = []
 
     for root, _, files in os.walk(repo_path):
 
@@ -10,10 +10,13 @@ def discover_exports(repo_path):
 
             if file.endswith(".js"):
 
-                exports.append({
+                files_found.append(
 
-                    "file": os.path.join(root, file)
+                    os.path.join(
+                        root,
+                        file
+                    )
 
-                })
+                )
 
-    return exports
+    return files_found
