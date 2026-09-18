@@ -4,6 +4,8 @@ def build_mermaid_graph(
 
     lines = []
 
+    seen = set()
+
     lines.append(
         "graph TD"
     )
@@ -11,15 +13,35 @@ def build_mermaid_graph(
     for flow in end_to_end_flows:
 
         source = flow["source"]
+
         via = flow["via"]
+
         sink = flow["sink"]
 
-        lines.append(
-            f"{source} --> {via}"
+        edge1 = (
+            source,
+            via
         )
 
-        lines.append(
-            f"{via} --> {sink}"
+        edge2 = (
+            via,
+            sink
         )
+
+        if edge1 not in seen:
+
+            lines.append(
+                f"{source} --> {via}"
+            )
+
+            seen.add(edge1)
+
+        if edge2 not in seen:
+
+            lines.append(
+                f"{via} --> {sink}"
+            )
+
+            seen.add(edge2)
 
     return "\n".join(lines)

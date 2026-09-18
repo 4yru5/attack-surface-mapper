@@ -94,11 +94,6 @@
             "file": "examples/realistic-app/services/export.js"
         },
         {
-            "source": "command",
-            "sink": "exec",
-            "file": "examples/realistic-app/services/chained_exec.js"
-        },
-        {
             "source": "data",
             "sink": "axios.get",
             "file": "examples/realistic-app/services/chained_webhook.js"
@@ -107,16 +102,6 @@
             "source": "url",
             "sink": "axios.get",
             "file": "examples/realistic-app/services/webhook.js"
-        },
-        {
-            "source": "data",
-            "sink": "axios.get",
-            "file": "examples/realistic-app/services/webhookService.js"
-        },
-        {
-            "source": "data",
-            "sink": "axios.get",
-            "file": "examples/realistic-app/services/dataflow.js"
         }
     ],
     "end_to_end_flows": [

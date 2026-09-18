@@ -11,7 +11,6 @@ def discover_internal_sinks(
 ):
 
     flows = []
-    
     seen = set()
 
     for root, _, files in os.walk(repo_path):
@@ -42,6 +41,16 @@ def discover_internal_sinks(
                     SINK_PATTERN.findall(
                         content
                     ):
+
+                    key = (
+                        variable,
+                        sink
+                    )
+
+                    if key in seen:
+                        continue
+
+                    seen.add(key)
 
                     flows.append({
 
