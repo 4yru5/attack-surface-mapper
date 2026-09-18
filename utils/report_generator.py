@@ -15,7 +15,11 @@ def generate_report(
     attack_paths,
     reachability,
     functions,
-    calls
+    calls,
+    tainted_variables,
+    dataflow_graph,
+    dataflow_results,
+    taint_chains
 ):
 
     report = []
@@ -86,9 +90,12 @@ def generate_report(
     }
     )
 
-    report.append(
-    f"- Authentication Technologies: {len(unique_auth)}"
-    )
+    for auth in unique_auth:
+
+        report.append(
+            f"- {auth}"
+        )
+    
     report.append("")
     # Services
 
@@ -323,6 +330,67 @@ def generate_report(
 
     report.append("")
 
+    report.append("")
+    report.append("## Taint Tracking")
+    report.append("")
+
+    for item in tainted_variables:
+
+        report.append(
+            f"- {item['variable']} "
+            f"(Tainted)"
+        )
+
+    report.append("")
+
+    report.append("")
+    report.append("## Data Flow Graph")
+    report.append("")
+
+    for edge in dataflow_graph:
+
+        report.append(
+            f"- {edge['source']} "
+            f"-> "
+            f"{edge['target']}"
+        )
+
+    report.append("")
+    report.append("## Reachability v3")
+    report.append("")
+
+    for item in dataflow_results:
+
+        report.append(
+            f"Source: {item['source']}"
+        )
+
+        report.append(
+            f"Sink: {item['sink']}"
+        )
+
+        report.append(
+            f"Reachable: {item['reachable']}"
+        )
+
+    report.append("")
+
+    report.append("")
+    report.append("## Taint Propagation")
+    report.append("")
+
+    for chain in taint_chains:
+
+        report.append(
+
+            f"- {chain['source']} "
+            f"-> "
+            f"{chain['target']} "
+            f"({chain['type']})"
+    )
+
+    report.append("")
+
     # Summary
 
     report.append("# Summary")
@@ -353,7 +421,7 @@ def generate_report(
     )
 
     report.append(
-        f"- Auth Indicators: {len(auth_data)}"
+        f"- Auth Indicators: {len(unique_auth)}"
     )
 
     return "\n".join(report)

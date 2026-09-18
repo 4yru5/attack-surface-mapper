@@ -16,6 +16,11 @@ from detectors.attack_path_generator import generate_attack_paths
 from detectors.reachability_analyzer import analyze_reachability
 from detectors.function_detector import discover_functions
 from detectors.call_detector import discover_function_calls
+from detectors.taint_tracker import discover_tainted_variables
+from detectors.dataflow_graph import build_dataflow_graph, analyze_dataflow
+from detectors.variable_tracker import discover_variable_flows
+from detectors.arguement_tracker import discover_argument_flows
+from detectors.taint_propagation import propagate_taint
 from utils.report_generator import generate_report
 
 
@@ -62,6 +67,32 @@ def main(repo_path):
         calls
     )
 
+    tainted_variables = discover_tainted_variables(repo_path)
+
+    dataflow_graph = build_dataflow_graph(
+    repo_path,
+    tainted_variables
+    )
+
+    dataflow_results = analyze_dataflow(
+    repo_path,
+    tainted_variables
+    )
+
+    variable_flows = discover_variable_flows(
+    repo_path
+    )
+
+    argument_flows = discover_argument_flows(
+    repo_path
+    )
+
+    taint_chains = propagate_taint(
+        tainted_variables,
+        variable_flows,
+        argument_flows
+    )
+
     risk_scores = calculate_risk(
         routes,
         admin_routes,
@@ -84,7 +115,11 @@ def main(repo_path):
         attack_paths=attack_paths,
         reachability=reachability,
         functions=functions,
-        calls=calls
+        calls=calls,
+        dataflow_graph=dataflow_graph,
+        dataflow_results=dataflow_results,
+        tainted_variables=tainted_variables,
+        taint_chains=taint_chains
     )
 
     print(report)
