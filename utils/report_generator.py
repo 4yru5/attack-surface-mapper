@@ -497,6 +497,28 @@ def generate_report(
         )
 
     report.append("")
+    report.append("## Reconstructed Attack Paths")
+    report.append("")
+
+    for flow in end_to_end_flows:
+
+        report.append(
+            f"Source: {flow['source']}"
+        )
+        report.append(
+            f"Sink: {flow['sink']}"
+        )
+
+        report.append(
+            f"Chain: "
+            f"{flow['source']} "
+            f"-> "
+            f"{flow['via']} "
+            f"-> "
+            f"{flow['sink']} "
+        )
+
+    report.append("")
     report.append("## Call Graph")
     report.append("")
 
@@ -504,7 +526,8 @@ def generate_report(
 
        report.append(
 
-            f"- {edge['caller']} "
+            f"- {edge['caller_file']}. "
+            f"{edge['caller']} "
             f"-> "
             f"{edge['callee']}"
         )

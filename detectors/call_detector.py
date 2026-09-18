@@ -120,6 +120,12 @@ def discover_function_calls(
 
                         seen.add(key)
 
+                        module = file_path.split("/")[-1]
+
+                        module = module.replace(".js", "")
+
+                        module = module.replace(".ts", "")
+
                         calls.append({
 
                             "file":
@@ -129,7 +135,10 @@ def discover_function_calls(
                             current_function,
 
                             "callee":
-                            callee
+                            callee,
+
+                            "caller_file":
+                            module
 
                         })
 
