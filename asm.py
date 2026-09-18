@@ -1,4 +1,5 @@
 import os
+import json
 
 from detectors.framework_detector import detect_framework
 from detectors.route_detector import discover_routes
@@ -29,7 +30,11 @@ from detectors.function_definition_tracker import discover_function_definitions
 from detectors.parameter_mapper import map_parameters
 from detectors.interprocedural_taint import propagate_interprocedural_taint
 from detectors.internal_sink_mapper import discover_internal_sinks
+from detectors.end_to_end_flow_builder import build_end_to_end_flows
+from detectors.call_graph_builder import build_call_graph
+from detectors.mermaid_builder import build_mermaid_graph
 from utils.report_generator import generate_report
+
 
 
 def main(repo_path):
@@ -101,6 +106,12 @@ def main(repo_path):
             repo_path
         )
 
+    end_to_end_flows = \
+        build_end_to_end_flows(
+            parameter_mappings,
+            internal_sink_flows
+        )
+
     taint_chains = propagate_taint(
         tainted_variables,
         variable_flows,
@@ -126,6 +137,16 @@ def main(repo_path):
     js_files = discover_js_files(repo_path)
 
     relationships = map_cross_file_flows(imports,js_files)
+
+    call_graph = \
+        build_call_graph(
+            calls
+        )
+
+    mermaid_graph = \
+        build_mermaid_graph(
+            end_to_end_flows
+        )
 
     cross_file_results = \
         analyze_cross_file_reachability(
@@ -157,20 +178,50 @@ def main(repo_path):
         cross_file_results=cross_file_results,
         function_definitions=function_definitions,
         parameter_mappings=parameter_mappings,
-        internal_sink_flows=internal_sink_flows
+        internal_sink_flows=internal_sink_flows,
+        end_to_end_flows=end_to_end_flows,
+        call_graph=call_graph,
+        mermaid_graph=mermaid_graph
     )
 
     print(report)
 
     os.makedirs("reports", exist_ok=True)
 
-    with open(
-        "reports/latest_report.md",
-        "w",
-        encoding="utf-8"
-    ) as f:
-        f.write(report)
+    json_report = {
 
+    "framework":
+    framework_data,
+
+    "routes":
+    routes,
+
+    "attack_paths":
+    attack_paths,
+
+    "parameter_mappings":
+    parameter_mappings,
+
+    "internal_sink_flows":
+    internal_sink_flows,
+
+    "end_to_end_flows":
+    end_to_end_flows
+
+    }
+
+    with open(
+            "reports/latest_report.json",
+            "w",
+            encoding="utf-8"
+        ) as f:
+
+            json.dump(
+                 json_report,
+                 f,
+                 indent=4
+            )
+            
     print(
         "\n✅ Report saved to reports/latest_report.md"
     )

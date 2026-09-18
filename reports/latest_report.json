@@ -1,0 +1,134 @@
+{
+    "framework": {
+        "framework": "Express",
+        "language": "TypeScript"
+    },
+    "routes": [
+        {
+            "method": "POST",
+            "path": "/login"
+        },
+        {
+            "method": "POST",
+            "path": "/register"
+        },
+        {
+            "method": "GET",
+            "path": "/users"
+        },
+        {
+            "method": "GET",
+            "path": "/users/:id"
+        },
+        {
+            "method": "PUT",
+            "path": "/users/:id"
+        },
+        {
+            "method": "POST",
+            "path": "/upload/image"
+        },
+        {
+            "method": "POST",
+            "path": "/upload/document"
+        },
+        {
+            "method": "GET",
+            "path": "/admin"
+        },
+        {
+            "method": "DELETE",
+            "path": "/admin/user/:id"
+        }
+    ],
+    "attack_paths": [
+        {
+            "file": "examples/realistic-app/services/export.js",
+            "source": "req.body.command",
+            "sink": "exec(",
+            "risk": "Potential Command Injection"
+        },
+        {
+            "file": "examples/realistic-app/services/chained_exec.js",
+            "source": "req.body.command",
+            "sink": "exec(",
+            "risk": "Potential Command Injection"
+        },
+        {
+            "file": "examples/realistic-app/services/chained_webhook.js",
+            "source": "req.body.url",
+            "sink": "axios.get(",
+            "risk": "Potential SSRF"
+        },
+        {
+            "file": "examples/realistic-app/services/webhook.js",
+            "source": "req.body.url",
+            "sink": "axios.get(",
+            "risk": "Potential SSRF"
+        },
+        {
+            "file": "examples/realistic-app/services/dataflow.js",
+            "source": "req.body.url",
+            "sink": "axios.get(",
+            "risk": "Potential SSRF"
+        }
+    ],
+    "parameter_mappings": [
+        {
+            "source": "url",
+            "target": "data",
+            "function": "send",
+            "file": "examples/realistic-app/services/webhookService.js"
+        },
+        {
+            "source": "validated",
+            "target": "data",
+            "function": "sendRequest",
+            "file": "examples/realistic-app/services/chained_webhook.js"
+        }
+    ],
+    "internal_sink_flows": [
+        {
+            "source": "command",
+            "sink": "exec",
+            "file": "examples/realistic-app/services/export.js"
+        },
+        {
+            "source": "command",
+            "sink": "exec",
+            "file": "examples/realistic-app/services/chained_exec.js"
+        },
+        {
+            "source": "data",
+            "sink": "axios.get",
+            "file": "examples/realistic-app/services/chained_webhook.js"
+        },
+        {
+            "source": "url",
+            "sink": "axios.get",
+            "file": "examples/realistic-app/services/webhook.js"
+        },
+        {
+            "source": "data",
+            "sink": "axios.get",
+            "file": "examples/realistic-app/services/webhookService.js"
+        },
+        {
+            "source": "data",
+            "sink": "axios.get",
+            "file": "examples/realistic-app/services/dataflow.js"
+        }
+    ],
+    "end_to_end_flows": [
+        {
+            "source": "url",
+            "sink": "axios.get",
+            "via": "data"
+        },
+        {
+            "source": "validated",
+            "sink": "axios.get",
+            "via": "data"
+        }
+    ]
+}

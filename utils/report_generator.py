@@ -24,7 +24,10 @@ def generate_report(
     cross_file_results,
     function_definitions,
     parameter_mappings,
-    internal_sink_flows
+    internal_sink_flows,
+    end_to_end_flows,
+    call_graph, 
+    mermaid_graph
 ):
 
     report = []
@@ -471,6 +474,8 @@ def generate_report(
     report.append("## Internal Sink Flows")
     report.append("")
 
+    seen = set()
+
     for flow in internal_sink_flows:
 
         report.append(
@@ -484,6 +489,47 @@ def generate_report(
 
     report.append("")
 
+    report.append("")
+    report.append("## End-To-End Flows")
+    report.append("")
+
+    for flow in end_to_end_flows:
+
+        report.append(
+
+            f"- {flow['source']} "
+            f"-> {flow['via']} "
+            f"-> {flow['sink']}"
+
+        )
+
+    report.append("")
+    report.append("## Call Graph")
+    report.append("")
+
+    for edge in call_graph:
+
+       report.append(
+
+            f"- {edge['caller']} "
+            f"-> "
+            f"{edge['callee']}"
+        )
+       
+    report.append("")
+
+    report.append("")
+    report.append("## Mermaid Flow Graph")
+    report.append("")
+
+    report.append("```mermaid")
+
+    report.append(
+    mermaid_graph
+    )
+
+    report.append("```")
+   
     # Summary
 
     report.append("# Summary")

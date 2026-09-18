@@ -11,6 +11,7 @@ def discover_internal_sinks(
 ):
 
     flows = []
+    
     seen = set()
 
     for root, _, files in os.walk(repo_path):
