@@ -8,38 +8,42 @@ IMPORT_PATTERN = re.compile(
 
 def discover_imports(repo_path):
 
-    results = []
+    imports = []
 
     for root, _, files in os.walk(repo_path):
 
         for file in files:
 
-            if file.endswith(".js"):
+            if not file.endswith(".js"):
+                continue
 
-                file_path = os.path.join(root, file)
+            file_path = os.path.join(
+                root,
+                file
+            )
 
-                try:
+            try:
 
-                    content = open(
-                        file_path,
-                        encoding="utf-8"
-                    ).read()
+                content = open(
+                    file_path,
+                    encoding="utf-8"
+                ).read()
 
-                    matches = IMPORT_PATTERN.findall(
-                        content
-                    )
+                matches = IMPORT_PATTERN.findall(
+                    content
+                )
 
-                    for match in matches:
+                for match in matches:
 
-                        results.append({
+                    imports.append({
 
-                            "file": file_path,
+                        "file": file_path,
 
-                            "path": match
+                        "required_path": match
 
-                        })
+                    })
 
-                except Exception:
-                    pass
+            except Exception:
+                pass
 
-    return results
+    return imports

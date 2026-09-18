@@ -10,8 +10,8 @@ def map_cross_file_flows(
 
     for imp in imports:
 
-        imported_file = os.path.basename(
-            imp["path"]
+        required_name = os.path.basename(
+            imp["required_path"]
         )
 
         for exp in exports:
@@ -20,7 +20,7 @@ def map_cross_file_flows(
                 exp["file"]
             ).replace(".js", "")
 
-            if imported_file == export_name:
+            if required_name == export_name:
 
                 relationships.append({
 

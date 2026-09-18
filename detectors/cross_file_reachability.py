@@ -7,37 +7,41 @@ def analyze_cross_file_reachability(
 
     seen = set()
 
-    for path in attack_paths:
+    for attack_path in attack_paths:
 
         for rel in relationships:
 
             if (
-                path["file"] == rel["caller"]
+                attack_path["file"] == rel["caller"]
                 or
-                path["file"] == rel["callee"]
+                attack_path["file"] == rel["callee"]
             ):
 
                 key = (
-                    path["source"],
-                    path["sink"]
+
+                    attack_path["source"],
+
+                    attack_path["sink"]
+
                 )
 
-                if key not in seen:
+                if key in seen:
+                    continue
 
-                    seen.add(key)
+                seen.add(key)
 
-                    results.append({
+                results.append({
 
-                        "source": path["source"],
+                    "source": attack_path["source"],
 
-                        "sink": path["sink"],
+                    "sink": attack_path["sink"],
 
-                        "from": rel["caller"],
+                    "from": rel["caller"],
 
-                        "to": rel["callee"],
+                    "to": rel["callee"],
 
-                        "reachable": True
+                    "reachable": True
 
-                    })
+                })
 
     return results

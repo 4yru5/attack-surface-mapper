@@ -73,23 +73,13 @@ def main(repo_path):
 
     tainted_variables = discover_tainted_variables(repo_path)
 
-    dataflow_graph = build_dataflow_graph(
-    repo_path,
-    tainted_variables
-    )
+    dataflow_graph = build_dataflow_graph(repo_path,tainted_variables)
 
-    dataflow_results = analyze_dataflow(
-    repo_path,
-    tainted_variables
-    )
+    dataflow_results = analyze_dataflow(repo_path,tainted_variables)
 
-    variable_flows = discover_variable_flows(
-    repo_path
-    )
+    variable_flows = discover_variable_flows(repo_path)
 
-    argument_flows = discover_argument_flows(
-    repo_path
-    )
+    argument_flows = discover_argument_flows(repo_path)
 
     taint_chains = propagate_taint(
         tainted_variables,
@@ -105,18 +95,25 @@ def main(repo_path):
         services
     )
 
-    imports = discover_imports(
-        repo_path
-    )
+    imports = discover_imports(repo_path)
 
-    exports = discover_exports(
-        repo_path
-    )
+    exports = discover_exports(repo_path)
 
-    relationships = map_cross_file_flows(
-        imports,
-        exports
-    )
+    relationships = map_cross_file_flows(imports,exports)
+
+    print("\nIMPORTS")
+    for item in imports:
+        print(item)
+
+    print("\nEXPORTS")
+    for item in exports:
+        print(exports)
+    
+
+    print("\nRELATIONSHIPS")
+    for item in relationships:
+        print(relationships)
+    print("\n")
 
     cross_file_results = \
         analyze_cross_file_reachability(
