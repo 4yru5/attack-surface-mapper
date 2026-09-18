@@ -14,7 +14,7 @@ def analyze_reachability(
 
         file_calls = [
 
-            call["call"]
+            call["callee"]
 
             for call in calls
 

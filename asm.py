@@ -33,6 +33,7 @@ from detectors.internal_sink_mapper import discover_internal_sinks
 from detectors.end_to_end_flow_builder import build_end_to_end_flows
 from detectors.call_graph_builder import build_call_graph
 from detectors.mermaid_builder import build_mermaid_graph
+from detectors.attack_chain_builder import build_attack_chains
 from utils.report_generator import generate_report
 
 
@@ -112,6 +113,11 @@ def main(repo_path):
             internal_sink_flows
         )
 
+    attack_chains = \
+        build_attack_chains(
+             end_to_end_flows
+        )
+
     taint_chains = propagate_taint(
         tainted_variables,
         variable_flows,
@@ -181,8 +187,18 @@ def main(repo_path):
         internal_sink_flows=internal_sink_flows,
         end_to_end_flows=end_to_end_flows,
         call_graph=call_graph,
-        mermaid_graph=mermaid_graph
+        mermaid_graph=mermaid_graph,
+        attack_chains=attack_chains
     )
+
+    print("\nCALL GRAPH\n")
+
+    for call in calls:
+         print(
+             f"{call['caller']} "
+             f"-> "
+             f"{call['callee']} "
+        )
 
     print(report)
 
@@ -221,7 +237,7 @@ def main(repo_path):
                  f,
                  indent=4
             )
-            
+
     print(
         "\n✅ Report saved to reports/latest_report.md"
     )

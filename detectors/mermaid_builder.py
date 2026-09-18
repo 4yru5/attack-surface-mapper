@@ -3,12 +3,9 @@ def build_mermaid_graph(
 ):
 
     lines = []
-
     seen = set()
 
-    lines.append(
-        "graph TD"
-    )
+    lines.append("graph TD")
 
     for flow in end_to_end_flows:
 

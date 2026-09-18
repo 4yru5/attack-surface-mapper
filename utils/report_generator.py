@@ -27,7 +27,8 @@ def generate_report(
     internal_sink_flows,
     end_to_end_flows,
     call_graph, 
-    mermaid_graph
+    mermaid_graph,
+    attack_chains
 ):
 
     report = []
@@ -437,8 +438,6 @@ def generate_report(
             f"{result['sink']} "
             f"(Reachable)"
         )
-
-    report.append("")
     
     report.append("")
     report.append("## Function Definitions")
@@ -453,8 +452,6 @@ def generate_report(
         report.append(
             f"- {fn['name']} ({params})"
         )
-
-    report.append("")
         
     report.append("")
     report.append("## Parameter Mapping")
@@ -484,10 +481,6 @@ def generate_report(
             f"-> "
             f"{flow['sink']}"
         )
-
-    report.append("")
-
-    report.append("")
 
     report.append("")
     report.append("## End-To-End Flows")
@@ -529,7 +522,17 @@ def generate_report(
     )
 
     report.append("```")
-   
+
+    report.append("")
+    report.append("## Attack Chains")
+    report.append("")
+
+    for chain in attack_chains:
+
+        report.append(
+            chain["chain"]
+        )
+    report.append("")
     # Summary
 
     report.append("# Summary")

@@ -1,8 +1,12 @@
 import os
 import re
 
+FUNCTION_PATTERN = re.compile(
+    r'function\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*\('
+)
+
 CALL_PATTERN = re.compile(
-    r'([a-zA-Z_][a-zA-Z0-9_]*)\s*\('
+    r'([a-zA-Z_][a-zA-Z0-9_\.]*)\s*\('
 )
 
 EXCLUDED = {
@@ -14,21 +18,35 @@ EXCLUDED = {
     "catch",
     "require",
     "function",
-    "return"
+    "return",
+
+    "Router",
+    "get",
+    "post",
+    "put",
+    "delete",
+    "next"
 
 }
 
 
-def discover_function_calls(repo_path):
+def discover_function_calls(
+    repo_path
+):
 
     calls = []
+
     seen = set()
 
-    for root, _, files in os.walk(repo_path):
+    for root, _, files in os.walk(
+        repo_path
+    ):
 
         for file in files:
 
-            if not file.endswith((".js", ".ts")):
+            if not file.endswith(
+                (".js", ".ts")
+            ):
                 continue
 
             file_path = os.path.join(
@@ -44,34 +62,76 @@ def discover_function_calls(repo_path):
                     encoding="utf-8"
                 ) as f:
 
-                    content = f.read()
+                    lines = f.readlines()
 
-                matches = CALL_PATTERN.findall(
-                    content
-                )
+                current_function = None
 
-                for function_name in matches:
+                for line in lines:
 
-                    if function_name in EXCLUDED:
-                        continue
+                    #
+                    # Identify current function
+                    #
 
-                    key = (
-                        file_path,
-                        function_name
-                    )
+                    fn_match = \
+                        FUNCTION_PATTERN.search(
+                            line
+                        )
 
-                    if key in seen:
-                        continue
+                    if fn_match:
 
-                    seen.add(key)
+                        current_function = \
+                            fn_match.group(1)
 
-                    calls.append({
+                    #
+                    # Find function calls
+                    #
 
-                        "file": file_path,
+                    matches = \
+                        CALL_PATTERN.findall(
+                            line
+                        )
 
-                        "call": function_name
+                    for call in matches:
 
-                    })
+                        callee = \
+                            call.split(".")[-1]
+
+                        if callee in EXCLUDED:
+                            continue
+
+                        if not current_function:
+                            continue
+
+                        if callee == current_function:
+                            continue
+
+                        key = (
+
+                            file_path,
+
+                            current_function,
+
+                            callee
+
+                        )
+
+                        if key in seen:
+                            continue
+
+                        seen.add(key)
+
+                        calls.append({
+
+                            "file":
+                            file_path,
+
+                            "caller":
+                            current_function,
+
+                            "callee":
+                            callee
+
+                        })
 
             except Exception:
                 pass
