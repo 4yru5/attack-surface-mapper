@@ -40,19 +40,6 @@ def map_cross_file_flows(
                     js_file
                 )
 
-                print(
-                    "COMPARE:",
-                    imported_name,
-                    "vs",
-                    js_name
-                )
-
-                if imported_name == js_name:
-
-                    print(
-                        "MATCH FOUND!"
-                    )
-
                 if key in seen:
                     continue
 

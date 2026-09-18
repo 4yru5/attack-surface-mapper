@@ -1,48 +1,61 @@
-import os
-import re
-
-PARAM_PATTERN = re.compile(
-    r'function\s+([a-zA-Z0-9_]+)\((.*?)\)'
-)
-
-
-def discover_parameters(
-    repo_path
+def map_parameters(
+    argument_flows,
+    function_definitions
 ):
 
-    results = []
+    mappings = []
+    seen = set()
 
-    for root, _, files in os.walk(repo_path):
+    for call in argument_flows:
 
-        for file in files:
+        called_function = call["function"]
 
-            if file.endswith(".js"):
+        argument = call["argument"]
 
-                path = os.path.join(root, file)
+        simple_name = called_function.split(".")[-1]
 
-                try:
+        for definition in function_definitions:
 
-                    content = open(
-                        path,
-                        encoding="utf-8"
-                    ).read()
+            if definition["name"] != simple_name:
+                continue
 
-                    matches = PARAM_PATTERN.findall(
-                        content
-                    )
+            if not definition["parameters"]:
+                continue
 
-                    for fn, params in matches:
+            target = definition["parameters"][0]
 
-                        results.append({
+            # Skip self mappings
 
-                            "file": path,
+            if argument == target:
+                continue
 
-                            "function": fn,
+            #Deduplicate
 
-                            "params": params
-                        })
+            key = (
+                argument,
+                target,
+                simple_name
+            )
 
-                except Exception:
-                    pass
+            if key in seen:
+                continue
 
-    return results
+            seen.add(key)
+
+            mappings.append({
+
+                "source":
+                argument,
+
+                "target":
+                target,
+
+                "function":
+                simple_name,
+
+                "file":
+                definition["file"]
+
+            })
+
+    return mappings

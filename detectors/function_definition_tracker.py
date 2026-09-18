@@ -2,46 +2,72 @@ import os
 import re
 
 FUNCTION_PATTERN = re.compile(
-    r'function\s+([a-zA-Z0-9_]+)\s*\('
+    r'function\s+([A-Za-z0-9_]+)\s*\((.*?)\)'
+)
+
+ARROW_PATTERN = re.compile(
+    r'const\s+([A-Za-z0-9_]+)\s*=\s*\((.*?)\)\s*=>'
 )
 
 
-def discover_function_definitions(
-    repo_path
-):
+def discover_function_definitions(repo_path):
 
-    results = []
+    functions = []
 
     for root, _, files in os.walk(repo_path):
 
         for file in files:
 
-            if file.endswith(".js"):
+            if not file.endswith((".js", ".ts")):
+                continue
 
-                path = os.path.join(root, file)
+            path = os.path.join(root, file)
 
-                try:
+            try:
 
-                    content = open(
-                        path,
-                        encoding="utf-8"
-                    ).read()
+                with open(
+                    path,
+                    "r",
+                    encoding="utf-8"
+                ) as f:
 
-                    matches = FUNCTION_PATTERN.findall(
-                        content
-                    )
+                    content = f.read()
 
-                    for fn in matches:
+                for name, params in FUNCTION_PATTERN.findall(content):
 
-                        results.append({
+                    functions.append({
 
-                            "file": path,
+                        "name": name,
 
-                            "function": fn
+                        "parameters":
+                        [
+                            p.strip()
+                            for p in params.split(",")
+                            if p.strip()
+                        ],
 
-                        })
+                        "file": path
 
-                except Exception:
-                    pass
+                    })
 
-    return results
+                for name, params in ARROW_PATTERN.findall(content):
+
+                    functions.append({
+
+                        "name": name,
+
+                        "parameters":
+                        [
+                            p.strip()
+                            for p in params.split(",")
+                            if p.strip()
+                        ],
+
+                        "file": path
+
+                    })
+
+            except Exception:
+                pass
+
+    return functions

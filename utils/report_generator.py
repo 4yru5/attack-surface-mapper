@@ -21,7 +21,9 @@ def generate_report(
     dataflow_results,
     taint_chains,
     relationships,
-    cross_file_results
+    cross_file_results,
+    function_definitions,
+    parameter_mappings
 ):
 
     report = []
@@ -374,11 +376,11 @@ def generate_report(
     )
 
     report.append(
-        "Function definition tracking pending"
+        "Function definition tracking available"
     )
 
     report.append(
-        "Parameter mapping pending"
+        "Parameter mapping available"
     )
 
     report.append("")
@@ -431,6 +433,38 @@ def generate_report(
             f"{result['sink']} "
             f"(Reachable)"
         )
+
+    report.append("")
+    
+    report.append("")
+    report.append("## Function Definitions")
+    report.append("")
+
+    for fn in function_definitions:
+
+        params = ", ".join(
+        fn["parameters"]
+    )
+
+    report.append(
+        f"- {fn['name']} ({params})"
+    )
+
+    report.append("")
+        
+    report.append("")
+    report.append("## Parameter Mapping")
+    report.append("")
+
+    for mapping in parameter_mappings:
+
+        report.append(
+
+        f"- {mapping['source']} "
+        f"-> "
+        f"{mapping['target']}"
+
+    )
 
     report.append("")
 

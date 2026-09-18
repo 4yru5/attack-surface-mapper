@@ -25,6 +25,9 @@ from detectors.import_tracker import discover_imports
 from detectors.export_tracker import discover_js_files
 from detectors.cross_file_mapper import map_cross_file_flows
 from detectors.cross_file_reachability import analyze_cross_file_reachability
+from detectors.function_definition_tracker import discover_function_definitions
+from detectors.parameter_mapper import map_parameters
+from detectors.interprocedural_taint import propagate_interprocedural_taint
 from utils.report_generator import generate_report
 
 
@@ -81,11 +84,28 @@ def main(repo_path):
 
     argument_flows = discover_argument_flows(repo_path)
 
+    function_definitions = \
+    discover_function_definitions(
+        repo_path
+    )
+
+    parameter_mappings = \
+        map_parameters(
+            argument_flows,
+            function_definitions
+        )
+
     taint_chains = propagate_taint(
         tainted_variables,
         variable_flows,
         argument_flows
     )
+
+    taint_chains = \
+        propagate_interprocedural_taint(
+            taint_chains,
+            parameter_mappings
+        )
 
     risk_scores = calculate_risk(
         routes,
@@ -97,33 +117,16 @@ def main(repo_path):
 
     imports = discover_imports(repo_path)
 
-    print("\nIMPORT COUNT:", len(imports))
-
-    for item in imports:
-        print(item)
-
-    print("\nRAW IMPORTS")
-    for x in imports:
-        print(x)
-
     js_files = discover_js_files(repo_path)
 
     relationships = map_cross_file_flows(imports,js_files)
 
     cross_file_results = \
         analyze_cross_file_reachability(
-            attack_paths,
-            relationships
+            relationships,
+            parameter_mappings,
+            sinks
         )
-
-    print("\n===== IMPORTS =====")
-    print(imports)
-
-    print("\n===== JS FILES =====")
-    print(js_files)
-
-    print("\n===== RELATIONSHIPS =====")
-    print(relationships)
 
     report = generate_report(
         framework_data=framework_data,
@@ -145,7 +148,9 @@ def main(repo_path):
         tainted_variables=tainted_variables,
         taint_chains=taint_chains,
         relationships=relationships,
-        cross_file_results=cross_file_results
+        cross_file_results=cross_file_results,
+        function_definitions=function_definitions,
+        parameter_mappings=parameter_mappings
     )
 
     print(report)

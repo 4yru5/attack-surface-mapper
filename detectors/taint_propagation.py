@@ -5,7 +5,6 @@ def propagate_taint(
 ):
 
     chains = []
-
     seen = set()
 
     tainted = {

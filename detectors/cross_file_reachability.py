@@ -1,35 +1,47 @@
 def analyze_cross_file_reachability(
-    attack_paths,
-    relationships
+    relationships,
+    parameter_mappings,
+    sinks
 ):
 
     results = []
-
     seen = set()
 
-    for path in attack_paths:
+    for rel in relationships:
 
-        source = path["source"]
-        sink = path["sink"]
+        caller = rel["caller"]
 
-        key = (
-            source,
-            sink
-        )
+        callee = rel["callee"]
 
-        if key in seen:
-            continue
+        related_mappings = [
 
-        seen.add(key)
+            m
 
-        results.append({
+            for m in parameter_mappings
 
-            "source": source,
+            if m["file"] == callee
 
-            "sink": sink,
+        ]
 
-            "reachable": True
+        for mapping in related_mappings:
 
-        })
+            results.append({
+
+                "source":
+                caller,
+
+                "sink":
+                callee,
+
+                "caller":
+                caller,
+
+                "callee":
+                callee,
+
+                "parameter":
+                mapping["target"]
+
+            })
 
     return results
