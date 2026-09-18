@@ -19,7 +19,9 @@ def generate_report(
     tainted_variables,
     dataflow_graph,
     dataflow_results,
-    taint_chains
+    taint_chains,
+    relationships,
+    cross_file_results
 ):
 
     report = []
@@ -391,6 +393,42 @@ def generate_report(
 
     report.append("")
 
+    report.append("")
+    report.append(
+    "## Cross-File Relationships"
+    )
+    report.append("")
+
+    for rel in relationships:
+
+        report.append(
+
+            f"- {rel['caller']} "
+            f"-> "
+            f"{rel['callee']}"
+
+        )
+
+    report.append("")
+
+    report.append("")
+    report.append(
+    "## Cross-File Reachability"
+    )
+    report.append("")
+
+    for result in cross_file_results:
+
+        report.append(
+
+            f"- {result['source']} "
+            f"-> "
+            f"{result['sink']} "
+            f"(Reachable)"
+        )
+
+    report.append("")
+
     # Summary
 
     report.append("# Summary")
@@ -421,7 +459,7 @@ def generate_report(
     )
 
     report.append(
-        f"- Auth Indicators: {len(unique_auth)}"
+        f"- Authentication Technologies: {len(unique_auth)}"
     )
 
     return "\n".join(report)

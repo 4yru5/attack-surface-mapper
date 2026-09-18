@@ -21,6 +21,10 @@ from detectors.dataflow_graph import build_dataflow_graph, analyze_dataflow
 from detectors.variable_tracker import discover_variable_flows
 from detectors.arguement_tracker import discover_argument_flows
 from detectors.taint_propagation import propagate_taint
+from detectors.import_tracker import discover_imports
+from detectors.export_tracker import discover_exports
+from detectors.cross_file_mapper import map_cross_file_flows
+from detectors.cross_file_reachability import analyze_cross_file_reachability
 from utils.report_generator import generate_report
 
 
@@ -101,6 +105,25 @@ def main(repo_path):
         services
     )
 
+    imports = discover_imports(
+        repo_path
+    )
+
+    exports = discover_exports(
+        repo_path
+    )
+
+    relationships = map_cross_file_flows(
+        imports,
+        exports
+    )
+
+    cross_file_results = \
+        analyze_cross_file_reachability(
+            attack_paths,
+            relationships
+        )
+
     report = generate_report(
         framework_data=framework_data,
         routes=routes,
@@ -119,7 +142,9 @@ def main(repo_path):
         dataflow_graph=dataflow_graph,
         dataflow_results=dataflow_results,
         tainted_variables=tainted_variables,
-        taint_chains=taint_chains
+        taint_chains=taint_chains,
+        relationships=relationships,
+        cross_file_results=cross_file_results
     )
 
     print(report)
