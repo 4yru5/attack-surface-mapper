@@ -33,14 +33,27 @@ def map_parameters(
 
             key = (
                 argument,
-                target,
-                simple_name
+                target
             )
+
+            if argument in ["req", "res", "next"]:
+                continue
+
+            if target in ["req", "res", "next"]:
+                continue
 
             if key in seen:
                 continue
 
             seen.add(key)
+
+            print(
+                simple_name,
+                argument,
+                "->",
+                target,
+                definition["file"]
+            )
 
             mappings.append({
 

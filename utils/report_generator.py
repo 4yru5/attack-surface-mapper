@@ -23,7 +23,8 @@ def generate_report(
     relationships,
     cross_file_results,
     function_definitions,
-    parameter_mappings
+    parameter_mappings,
+    internal_sink_flows
 ):
 
     report = []
@@ -443,12 +444,12 @@ def generate_report(
     for fn in function_definitions:
 
         params = ", ".join(
-        fn["parameters"]
-    )
+            fn["parameters"]
+        )
 
-    report.append(
-        f"- {fn['name']} ({params})"
-    )
+        report.append(
+            f"- {fn['name']} ({params})"
+        )
 
     report.append("")
         
@@ -465,6 +466,21 @@ def generate_report(
         f"{mapping['target']}"
 
     )
+
+    report.append("")
+    report.append("## Internal Sink Flows")
+    report.append("")
+
+    for flow in internal_sink_flows:
+
+        report.append(
+
+            f"- {flow['source']} "
+            f"-> "
+            f"{flow['sink']}"
+        )
+
+    report.append("")
 
     report.append("")
 

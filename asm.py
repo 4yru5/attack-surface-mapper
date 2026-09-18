@@ -28,6 +28,7 @@ from detectors.cross_file_reachability import analyze_cross_file_reachability
 from detectors.function_definition_tracker import discover_function_definitions
 from detectors.parameter_mapper import map_parameters
 from detectors.interprocedural_taint import propagate_interprocedural_taint
+from detectors.internal_sink_mapper import discover_internal_sinks
 from utils.report_generator import generate_report
 
 
@@ -87,12 +88,17 @@ def main(repo_path):
     function_definitions = \
     discover_function_definitions(
         repo_path
-    )
+    )  
 
     parameter_mappings = \
         map_parameters(
             argument_flows,
             function_definitions
+        )
+
+    internal_sink_flows = \
+        discover_internal_sinks(
+            repo_path
         )
 
     taint_chains = propagate_taint(
@@ -150,7 +156,8 @@ def main(repo_path):
         relationships=relationships,
         cross_file_results=cross_file_results,
         function_definitions=function_definitions,
-        parameter_mappings=parameter_mappings
+        parameter_mappings=parameter_mappings,
+        internal_sink_flows=internal_sink_flows
     )
 
     print(report)
