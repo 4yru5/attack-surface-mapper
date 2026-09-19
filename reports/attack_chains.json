@@ -1,0 +1,371 @@
+[
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "req.body.email",
+        "via": "startTimer",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "req.body.email -> startTimer -> readFile"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "req.body.password",
+        "via": "startTimer",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "req.body.password -> startTimer -> readFile"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "req.body.passwordRepeat",
+        "via": "startTimer",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "req.body.passwordRepeat -> startTimer -> readFile"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "process.env.NODE_ENV",
+        "via": "startTimer",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "process.env.NODE_ENV -> startTimer -> readFile"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "process.env.PORT",
+        "via": "startTimer",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "process.env.PORT -> startTimer -> readFile"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "process.env.BASE_PATH",
+        "via": "startTimer",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "process.env.BASE_PATH -> startTimer -> readFile"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "process.env.EXIT_ON_READY",
+        "via": "startTimer",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "process.env.EXIT_ON_READY -> startTimer -> readFile"
+    },
+    {
+        "risk": "High",
+        "route": "OPTIONS *",
+        "source": "process.env.SOLUTIONS_WEBHOOK",
+        "via": "stringify",
+        "sink": "fetch",
+        "sink_class": "Network Sink",
+        "chain": "process.env.SOLUTIONS_WEBHOOK -> stringify -> fetch"
+    },
+    {
+        "risk": "High",
+        "route": "OPTIONS *",
+        "source": "process.env.NODE_ENV",
+        "via": "stringify",
+        "sink": "fetch",
+        "sink_class": "Network Sink",
+        "chain": "process.env.NODE_ENV -> stringify -> fetch"
+    },
+    {
+        "risk": "High",
+        "route": "OPTIONS *",
+        "source": "process.env.PORT",
+        "via": "checkIfRunningOnSupportedNodeVersion",
+        "sink": "fetch",
+        "sink_class": "Network Sink",
+        "chain": "process.env.PORT -> checkIfRunningOnSupportedNodeVersion -> fetch"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "req.body.email",
+        "via": "findOrCreate",
+        "sink": "query",
+        "sink_class": "Database Sink",
+        "chain": "req.body.email -> findOrCreate -> query"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "req.body.password",
+        "via": "findOrCreate",
+        "sink": "query",
+        "sink_class": "Database Sink",
+        "chain": "req.body.password -> findOrCreate -> query"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "req.query.q",
+        "via": "WHERE",
+        "sink": "query",
+        "sink_class": "Database Sink",
+        "chain": "req.query.q -> WHERE -> query"
+    },
+    {
+        "risk": "High",
+        "route": "OPTIONS *",
+        "source": "req.body.imageUrl",
+        "via": "match",
+        "sink": "fetch",
+        "sink_class": "Network Sink",
+        "chain": "req.body.imageUrl -> match -> fetch"
+    },
+    {
+        "risk": "High",
+        "route": "OPTIONS *",
+        "source": "req.cookies.token",
+        "via": "match",
+        "sink": "fetch",
+        "sink_class": "Network Sink",
+        "chain": "req.cookies.token -> match -> fetch"
+    },
+    {
+        "risk": "High",
+        "route": "OPTIONS *",
+        "source": "process.env.BASE_PATH",
+        "via": "match",
+        "sink": "fetch",
+        "sink_class": "Network Sink",
+        "chain": "process.env.BASE_PATH -> match -> fetch"
+    },
+    {
+        "risk": "Critical",
+        "route": "OPTIONS *",
+        "source": "req.body.captchaId",
+        "via": "floor",
+        "sink": "eval",
+        "sink_class": "Execution Sink",
+        "chain": "req.body.captchaId -> floor -> eval"
+    },
+    {
+        "risk": "Critical",
+        "route": "OPTIONS *",
+        "source": "req.body.captcha",
+        "via": "floor",
+        "sink": "eval",
+        "sink_class": "Execution Sink",
+        "chain": "req.body.captcha -> floor -> eval"
+    },
+    {
+        "risk": "High",
+        "route": "OPTIONS *",
+        "source": "req.cookies.token",
+        "via": "fromBuffer",
+        "sink": "writeFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "req.cookies.token -> fromBuffer -> writeFile"
+    },
+    {
+        "risk": "High",
+        "route": "OPTIONS *",
+        "source": "process.env.BASE_PATH",
+        "via": "fromBuffer",
+        "sink": "writeFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "process.env.BASE_PATH -> fromBuffer -> writeFile"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "req.headers.range",
+        "via": "videoPath",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "req.headers.range -> videoPath -> readFile"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "req.body.key",
+        "via": "getCodeChallenges",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "req.body.key -> getCodeChallenges -> readFile"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "req.body.selectedLines",
+        "via": "getCodeChallenges",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "req.body.selectedLines -> getCodeChallenges -> readFile"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "req.params.challenge",
+        "via": "getCodeChallenges",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "req.params.challenge -> getCodeChallenges -> readFile"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "req.cookies.token",
+        "via": "extractFilename",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "req.cookies.token -> extractFilename -> readFile"
+    },
+    {
+        "risk": "Critical",
+        "route": "OPTIONS *",
+        "source": "req.cookies.token",
+        "via": "extractFilename",
+        "sink": "eval",
+        "sink_class": "Execution Sink",
+        "chain": "req.cookies.token -> extractFilename -> eval"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "filePath",
+        "via": "startTimer",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "filePath -> startTimer -> readFile"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "By",
+        "via": "querySelector",
+        "sink": "query",
+        "sink_class": "Database Sink",
+        "chain": "By -> querySelector -> query"
+    },
+    {
+        "risk": "Critical",
+        "route": "OPTIONS *",
+        "source": "style",
+        "via": "Vector3",
+        "sink": "exec",
+        "sink_class": "Execution Sink",
+        "chain": "style -> Vector3 -> exec"
+    },
+    {
+        "risk": "Critical",
+        "route": "OPTIONS *",
+        "source": "val",
+        "via": "val",
+        "sink": "eval",
+        "sink_class": "Execution Sink",
+        "chain": "val -> val -> eval"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "filename",
+        "via": "filename",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "filename -> filename -> readFile"
+    },
+    {
+        "risk": "High",
+        "route": "OPTIONS *",
+        "source": "product",
+        "via": "product",
+        "sink": "fetch",
+        "sink_class": "Network Sink",
+        "chain": "product -> product -> fetch"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "currPath",
+        "via": "lstat",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "currPath -> lstat -> readFile"
+    },
+    {
+        "risk": "Critical",
+        "route": "OPTIONS *",
+        "source": "lines",
+        "via": "lstat",
+        "sink": "exec",
+        "sink_class": "Execution Sink",
+        "chain": "lines -> lstat -> exec"
+    },
+    {
+        "risk": "High",
+        "route": "OPTIONS *",
+        "source": "webhook",
+        "via": "stringify",
+        "sink": "fetch",
+        "sink_class": "Network Sink",
+        "chain": "webhook -> stringify -> fetch"
+    },
+    {
+        "risk": "Medium",
+        "route": "OPTIONS *",
+        "source": "file",
+        "via": "load",
+        "sink": "readFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "file -> load -> readFile"
+    },
+    {
+        "risk": "High",
+        "route": "OPTIONS *",
+        "source": "domain",
+        "via": "checkIfRunningOnSupportedNodeVersion",
+        "sink": "fetch",
+        "sink_class": "Network Sink",
+        "chain": "domain -> checkIfRunningOnSupportedNodeVersion -> fetch"
+    },
+    {
+        "risk": "High",
+        "route": "OPTIONS *",
+        "source": "url",
+        "via": "match",
+        "sink": "fetch",
+        "sink_class": "Network Sink",
+        "chain": "url -> match -> fetch"
+    },
+    {
+        "risk": "Critical",
+        "route": "OPTIONS *",
+        "source": "expression",
+        "via": "floor",
+        "sink": "eval",
+        "sink_class": "Execution Sink",
+        "chain": "expression -> floor -> eval"
+    },
+    {
+        "risk": "High",
+        "route": "OPTIONS *",
+        "source": "filePath",
+        "via": "fromBuffer",
+        "sink": "writeFile",
+        "sink_class": "Filesystem Sink",
+        "chain": "filePath -> fromBuffer -> writeFile"
+    },
+    {
+        "risk": "Critical",
+        "route": "OPTIONS *",
+        "source": "code",
+        "via": "extractFilename",
+        "sink": "eval",
+        "sink_class": "Execution Sink",
+        "chain": "code -> extractFilename -> eval"
+    }
+]

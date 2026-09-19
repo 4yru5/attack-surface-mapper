@@ -6,7 +6,8 @@ FUNCTION_PATTERN = re.compile(
 )
 
 ARROW_PATTERN = re.compile(
-    r'const\s+([A-Za-z0-9_]+)\s*=\s*\((.*?)\)\s*=>'
+    r'const\s+([A-Za-z0-9_]+)\s*=\s*'
+    r'(?:async\s*)?\((.*?)\)\s*=>'
 )
 
 

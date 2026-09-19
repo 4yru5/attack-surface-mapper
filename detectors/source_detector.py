@@ -6,7 +6,8 @@ SOURCE_PATTERNS = [
     r"req\.query\.[a-zA-Z0-9_]+",
     r"req\.params\.[a-zA-Z0-9_]+",
     r"req\.headers\.[a-zA-Z0-9_]+",
-    r"req\.cookies\.[a-zA-Z0-9_]+"
+    r"req\.cookies\.[a-zA-Z0-9_]+",
+    r"process\.env\.[a-zA-Z0-9_]+"
 ]
 
 

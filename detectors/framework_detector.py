@@ -28,6 +28,9 @@ def detect_framework(repo_path):
     elif "@nestjs/core" in dependencies:
         framework = "NestJS"
 
+    elif "fastify" in dependencies:
+        framework = "Fastify"
+
     if "typescript" in dependencies:
         language = "TypeScript"
 

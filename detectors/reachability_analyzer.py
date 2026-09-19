@@ -1,6 +1,6 @@
 def analyze_reachability(
     attack_paths,
-    functions,
+    function_definitions,
     calls
 ):
 
@@ -23,9 +23,9 @@ def analyze_reachability(
 
         file_functions = [
 
-            func["function"]
+            func["name"]
 
-            for func in functions
+            for func in function_definitions
 
             if func["file"] == file_path
         ]
@@ -50,3 +50,113 @@ def analyze_reachability(
         })
 
     return reachability
+
+
+SINKS = [
+    "axios.get(",
+    "exec(",
+    "spawn(",
+    "db.query("
+]
+
+
+def analyze_sink_reachability(
+    repo_path,
+    tainted_variables
+):
+
+    results = []
+
+    for entry in tainted_variables:
+
+        try:
+
+            with open(
+                entry["file"],
+                "r",
+                encoding="utf-8"
+            ) as source_file:
+                content = source_file.read()
+
+            variable = entry["variable"]
+
+            for sink in SINKS:
+
+                if sink in content and variable in content:
+
+                    results.append({
+                        "file": entry["file"],
+                        "source": variable,
+                        "sink": sink,
+                        "reachable": True
+                    })
+
+        except Exception:
+            pass
+
+    return results
+
+
+def analyze_cross_file_reachability(
+    relationships,
+    parameter_mappings,
+    sinks
+):
+
+    results = []
+
+    for relationship in relationships:
+
+        caller = relationship["caller"]
+        callee = relationship["callee"]
+
+        related_mappings = [
+            mapping
+            for mapping in parameter_mappings
+            if mapping["file"] == callee
+        ]
+
+        for mapping in related_mappings:
+
+            results.append({
+                "source": caller,
+                "sink": callee,
+                "caller": caller,
+                "callee": callee,
+                "parameter": mapping["target"]
+            })
+
+    return results
+
+
+def analyze_end_to_end_reachability(
+    parameter_mappings,
+    internal_sink_flows
+):
+
+    flows = []
+    seen = set()
+
+    for mapping in parameter_mappings:
+
+        for sink in internal_sink_flows:
+
+            if mapping["target"] != sink["source"]:
+                continue
+
+            key = (
+                mapping["source"],
+                sink["sink"]
+            )
+
+            if key in seen:
+                continue
+
+            seen.add(key)
+            flows.append({
+                "source": mapping["source"],
+                "sink": sink["sink"],
+                "via": mapping["target"]
+            })
+
+    return flows

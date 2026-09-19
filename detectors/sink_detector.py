@@ -1,15 +1,18 @@
 import os
+import re
 
 
 SINK_PATTERNS = [
-    "exec(",
-    "spawn(",
-    "db.query(",
-    "query(",
-    "axios.get(",
-    "fetch(",
-    "writeFile(",
-    "readFile("
+    "axios.get",
+    "fetch",
+    "exec",
+    "spawn",
+    "query",
+    "db.query",
+    "readFile",
+    "writeFile",
+    "eval",
+    "runInContext"
 ]
 
 
@@ -35,7 +38,10 @@ def discover_sinks(repo_path):
 
                     for pattern in SINK_PATTERNS:
 
-                        if pattern in content:
+                        if re.search(
+                            rf'\b{re.escape(pattern)}\s*\(',
+                            content
+                        ):
 
                             sinks.append({
                                 "file": path,
@@ -50,21 +56,25 @@ def discover_sinks(repo_path):
 
 RISK_MAP = {
 
-    "axios.get(": "Potential SSRF",
+    "axios.get": "Potential SSRF",
 
-    "fetch(": "Potential SSRF",
+    "fetch": "Potential SSRF",
 
-    "exec(": "Potential Command Injection",
+    "exec": "Potential Command Injection",
 
-    "spawn(": "Potential Command Injection",
+    "spawn": "Potential Command Injection",
 
-    "db.query(": "Potential SQL Injection",
+    "db.query": "Potential SQL Injection",
 
-    "query(": "Potential SQL Injection",
+    "query": "Potential SQL Injection",
 
-    "writeFile(": "Potential File Write",
+    "writeFile": "Potential File Write",
 
-    "readFile(": "Potential File Access"
+    "readFile": "Potential File Access",
+
+    "eval": "Potential Code Injection",
+
+    "runInContext": "Potential Code Injection"
 }
 
 

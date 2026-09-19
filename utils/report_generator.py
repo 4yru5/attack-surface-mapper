@@ -14,7 +14,6 @@ def generate_report(
     attack_graph,
     attack_paths,
     reachability,
-    functions,
     calls,
     tainted_variables,
     dataflow_graph,
@@ -26,7 +25,6 @@ def generate_report(
     parameter_mappings,
     internal_sink_flows,
     end_to_end_flows,
-    call_graph, 
     mermaid_graph,
     attack_chains
 ):
@@ -42,6 +40,33 @@ def generate_report(
 
     report.append("")
     report.append("---")
+    report.append("")
+
+    critical_findings = sum(
+        chain.get("risk") == "Critical"
+        for chain in attack_chains
+    )
+    high_findings = sum(
+        chain.get("risk") == "High"
+        for chain in attack_chains
+    )
+    medium_findings = sum(
+        chain.get("risk") == "Medium"
+        for chain in attack_chains
+    )
+
+    report.append("## Executive Findings")
+    report.append("")
+    report.append(f"Critical Findings: {critical_findings}")
+    report.append(f"High Findings: {high_findings}")
+    report.append(f"Medium Findings: {medium_findings}")
+    report.append("")
+
+    for index, chain in enumerate(attack_chains[:10], start=1):
+        report.append(f"{index}. {chain['source']} -> {chain['sink']}")
+        report.append(f"   {chain['sink_class']}")
+        report.append(f"   Risk: {chain['risk']}")
+
     report.append("")
 
     # Framework
@@ -227,7 +252,7 @@ def generate_report(
     report.append("## Attack Surface Graph")
     report.append("")
 
-    for edge in attack_graph:
+    for edge in attack_graph["edges"]:
 
         report.append(
             f"- {edge['source']} -> "
@@ -329,7 +354,7 @@ def generate_report(
 
     report.append(
     f"Functions Discovered: "
-    f"{len(functions)}"
+    f"{len(function_definitions)}"
     )
 
     report.append(
@@ -356,7 +381,7 @@ def generate_report(
     report.append("## Data Flow Graph")
     report.append("")
 
-    for edge in dataflow_graph:
+    for edge in dataflow_graph["edges"]:
 
         report.append(
             f"- {edge['source']} "
@@ -522,7 +547,7 @@ def generate_report(
     report.append("## Call Graph")
     report.append("")
 
-    for edge in call_graph:
+    for edge in calls:
 
        report.append(
 
@@ -553,8 +578,33 @@ def generate_report(
     for chain in attack_chains:
 
         report.append(
-            chain["chain"]
+            "Attack Chain"
         )
+
+        report.append(
+            f"Source: {chain['source']}"
+        )
+
+        report.append(
+            f"Route: {chain['route']}"
+        )
+
+        report.append("Flow:")
+        report.append(chain["source"])
+        report.append("↓")
+        report.append(chain["via"])
+        report.append("↓")
+        report.append(chain["sink"])
+
+        report.append(
+            f"Sink Class: {chain['sink_class']}"
+        )
+
+        report.append(
+            f"Risk: {chain['risk']}"
+        )
+
+        report.append("")
     report.append("")
     # Summary
 
@@ -587,6 +637,79 @@ def generate_report(
 
     report.append(
         f"- Authentication Technologies: {len(unique_auth)}"
+    )
+
+    report.append("")
+    report.append("## Analysis Coverage")
+    report.append("")
+
+    report.append(
+        f"- Attack Surface Graph: "
+        f"{len(attack_graph['nodes'])} nodes, "
+        f"{len(attack_graph['edges'])} edges"
+    )
+
+    report.append(
+        f"- Attack Paths: {len(attack_paths)}"
+    )
+
+    report.append(
+        f"- Reachability Results: {len(reachability)}"
+    )
+
+    report.append(
+        f"- Function Definitions: {len(function_definitions)}"
+    )
+
+    report.append(
+        f"- Call Graph Edges: {len(calls)}"
+    )
+
+    report.append(
+        f"- Tainted Variables: {len(tainted_variables)}"
+    )
+
+    report.append(
+        f"- Taint Flows: {len(taint_chains)}"
+    )
+
+    report.append(
+        f"- Dataflow Graph: "
+        f"{len(dataflow_graph['nodes'])} nodes, "
+        f"{len(dataflow_graph['edges'])} edges"
+    )
+
+    report.append(
+        f"- Parameter Mappings: {len(parameter_mappings)}"
+    )
+
+    report.append(
+        f"- Internal Sink Flows: {len(internal_sink_flows)}"
+    )
+
+    report.append(
+        f"- Cross-File Relationships: {len(relationships)}"
+    )
+
+    report.append(
+        f"- Cross-File Reachability: {len(cross_file_results)}"
+    )
+
+    report.append(
+        f"- End-To-End Flows: {len(end_to_end_flows)}"
+    )
+
+    report.append(
+        f"- Attack Chains: {len(attack_chains)}"
+    )
+
+    mermaid_edges = max(
+        len(mermaid_graph.splitlines()) - 1,
+        0
+    )
+
+    report.append(
+        f"- Mermaid Graph Edges: {mermaid_edges}"
     )
 
     return "\n".join(report)

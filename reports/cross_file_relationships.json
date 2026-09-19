@@ -1,0 +1,3278 @@
+[
+    {
+        "source_file": "juice-shop/app.ts",
+        "target_file": "juice-shop/lib/startup/validateDependencies.ts",
+        "function": "validateDependencies",
+        "caller": "juice-shop/app.ts",
+        "callee": "juice-shop/lib/startup/validateDependencies.ts"
+    },
+    {
+        "source_file": "juice-shop/app.ts",
+        "target_file": "juice-shop/server.ts",
+        "function": "start",
+        "caller": "juice-shop/app.ts",
+        "callee": "juice-shop/server.ts"
+    },
+    {
+        "source_file": "juice-shop/app.ts",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts",
+        "function": "start",
+        "caller": "juice-shop/app.ts",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/app.ts",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts",
+        "function": "start",
+        "caller": "juice-shop/app.ts",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/app.ts",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_2.ts",
+        "function": "start",
+        "caller": "juice-shop/app.ts",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/2fa.ts",
+        "function": "disable",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/2fa.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/metrics.ts",
+        "function": "observeRequestMetricsMiddleware",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/metrics.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/verify.ts",
+        "function": "accessControlChallenges",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/verify.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/lib/antiCheat.ts",
+        "function": "checkForPreSolveInteractions",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/lib/antiCheat.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/verify.ts",
+        "function": "serverSideChallenges",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/verify.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/fileServer.ts",
+        "function": "servePublicFiles",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/fileServer.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/quarantineServer.ts",
+        "function": "serveQuarantineFiles",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/quarantineServer.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/keyServer.ts",
+        "function": "serveKeyFiles",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/keyServer.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/logfileServer.ts",
+        "function": "serveLogFiles",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/logfileServer.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/frontend/src/app/score-board/components/challenge-card/challenge-card.component.spec.ts",
+        "function": "setup",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/frontend/src/app/score-board/components/challenge-card/challenge-card.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/2fa.ts",
+        "function": "setup",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/2fa.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/metrics.ts",
+        "function": "observeFileUploadMetricsMiddleware",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/metrics.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "asyncHandler",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/profileImageFileUpload.ts",
+        "function": "profileImageFileUpload",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/profileImageFileUpload.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/profileImageUrlUpload.ts",
+        "function": "profileImageUrlUpload",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/profileImageUrlUpload.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "appendUserId",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/memory.ts",
+        "function": "addMemory",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/memory.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/verify.ts",
+        "function": "jwtChallenges",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/verify.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "updateAuthenticatedUsers",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "isAuthorized",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "denyAll",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/recycles.ts",
+        "function": "blockRecycleItems",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/recycles.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/recycles.ts",
+        "function": "getRecycleItem",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/recycles.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/verify.ts",
+        "function": "forgedFeedbackChallenge",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/verify.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/captcha.ts",
+        "function": "verifyCaptcha",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/captcha.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/verify.ts",
+        "function": "captchaBypassChallenge",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/verify.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/verify.ts",
+        "function": "registerAdminChallenge",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/verify.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/verify.ts",
+        "function": "passwordRepeatChallenge",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/verify.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/verify.ts",
+        "function": "emptyUserRegistration",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/verify.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/basketItems.ts",
+        "function": "quantityCheckBeforeBasketItemUpdate",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/basketItems.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/basketItems.ts",
+        "function": "quantityCheckBeforeBasketItemAddition",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/basketItems.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/basketItems.ts",
+        "function": "addBasketItem",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/basketItems.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "isAccounting",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/payment.ts",
+        "function": "getPaymentMethods",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/payment.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/payment.ts",
+        "function": "delPaymentMethodById",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/payment.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/payment.ts",
+        "function": "getPaymentMethodById",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/payment.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/address.ts",
+        "function": "getAddress",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/address.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/address.ts",
+        "function": "delAddressById",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/address.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/address.ts",
+        "function": "getAddressById",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/address.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/delivery.ts",
+        "function": "getDeliveryMethods",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/delivery.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/delivery.ts",
+        "function": "getDeliveryMethod",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/delivery.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/verify.ts",
+        "function": "databaseRelatedChallenges",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/verify.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/test/api/helpers/auth.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/test/api/helpers/auth.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginBenderChallenge_2_correct.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/loginBenderChallenge_2_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginJimChallenge_1_correct.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/loginJimChallenge_1_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginAdminChallenge_1.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/loginAdminChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginBenderChallenge_4.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/loginBenderChallenge_4.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginJimChallenge_4.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/loginJimChallenge_4.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginBenderChallenge_1.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/loginBenderChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginAdminChallenge_4_correct.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/loginAdminChallenge_4_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginAdminChallenge_3.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/loginAdminChallenge_3.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginJimChallenge_3.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/loginJimChallenge_3.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginBenderChallenge_3.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/loginBenderChallenge_3.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginAdminChallenge_2.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/loginAdminChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginJimChallenge_2.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/loginJimChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/login.ts",
+        "function": "login",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/login.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/changePassword.ts",
+        "function": "changePassword",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/changePassword.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/resetPassword.ts",
+        "function": "resetPassword",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/resetPassword.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/securityQuestion.ts",
+        "function": "securityQuestion",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/securityQuestion.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/currentUser.ts",
+        "function": "retrieveLoggedInUser",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/currentUser.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/unionSqlInjectionChallenge_1.ts",
+        "function": "searchProducts",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/unionSqlInjectionChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/dbSchemaChallenge_1.ts",
+        "function": "searchProducts",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/dbSchemaChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/dbSchemaChallenge_2_correct.ts",
+        "function": "searchProducts",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/dbSchemaChallenge_2_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/unionSqlInjectionChallenge_2_correct.ts",
+        "function": "searchProducts",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/unionSqlInjectionChallenge_2_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/dbSchemaChallenge_3.ts",
+        "function": "searchProducts",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/dbSchemaChallenge_3.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/unionSqlInjectionChallenge_3.ts",
+        "function": "searchProducts",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/unionSqlInjectionChallenge_3.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/search.ts",
+        "function": "searchProducts",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/search.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/basket.ts",
+        "function": "retrieveBasket",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/basket.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/order.ts",
+        "function": "placeOrder",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/order.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/coupon.ts",
+        "function": "applyCoupon",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/coupon.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/appVersion.ts",
+        "function": "retrieveAppVersion",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/appVersion.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/appConfiguration.ts",
+        "function": "retrieveAppConfiguration",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/appConfiguration.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/repeatNotification.ts",
+        "function": "repeatNotification",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/repeatNotification.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/continueCode.ts",
+        "function": "continueCode",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/continueCode.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/continueCode.ts",
+        "function": "continueCodeFindIt",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/continueCode.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/continueCode.ts",
+        "function": "continueCodeFixIt",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/continueCode.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/restoreProgress.ts",
+        "function": "restoreProgressFindIt",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/restoreProgress.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/restoreProgress.ts",
+        "function": "restoreProgressFixIt",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/restoreProgress.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/restoreProgress.ts",
+        "function": "restoreProgress",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/restoreProgress.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/captcha.ts",
+        "function": "captchas",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/captcha.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/imageCaptcha.ts",
+        "function": "imageCaptchas",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/imageCaptcha.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/trackOrder.ts",
+        "function": "trackOrder",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/trackOrder.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/countryMapping.ts",
+        "function": "countryMapping",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/countryMapping.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/saveLoginIp.ts",
+        "function": "saveLoginIp",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/saveLoginIp.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/imageCaptcha.ts",
+        "function": "verifyImageCaptcha",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/imageCaptcha.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/dataExport.ts",
+        "function": "dataExport",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/dataExport.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/languages.ts",
+        "function": "getLanguageList",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/languages.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/orderHistory.ts",
+        "function": "orderHistory",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/orderHistory.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/orderHistory.ts",
+        "function": "allOrders",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/orderHistory.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/orderHistory.ts",
+        "function": "toggleDeliveryStatus",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/orderHistory.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/wallet.ts",
+        "function": "getWalletBalance",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/wallet.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/wallet.ts",
+        "function": "addWalletBalance",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/wallet.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/deluxe.ts",
+        "function": "deluxeMembershipStatus",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/deluxe.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/deluxe.ts",
+        "function": "upgradeToDeluxe",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/deluxe.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/memory.ts",
+        "function": "getMemories",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/memory.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/showProductReviews.ts",
+        "function": "showProductReviews",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/showProductReviews.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/createProductReviews.ts",
+        "function": "createProductReviews",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/createProductReviews.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/noSqlReviewsChallenge_2.ts",
+        "function": "updateProductReviews",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/noSqlReviewsChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/forgedReviewChallenge_1.ts",
+        "function": "updateProductReviews",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/forgedReviewChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/noSqlReviewsChallenge_3_correct.ts",
+        "function": "updateProductReviews",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/noSqlReviewsChallenge_3_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/forgedReviewChallenge_3.ts",
+        "function": "updateProductReviews",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/forgedReviewChallenge_3.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/forgedReviewChallenge_2_correct.ts",
+        "function": "updateProductReviews",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/forgedReviewChallenge_2_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/noSqlReviewsChallenge_1.ts",
+        "function": "updateProductReviews",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/noSqlReviewsChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/updateProductReviews.ts",
+        "function": "updateProductReviews",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/updateProductReviews.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/likeProductReviews.ts",
+        "function": "likeProductReviews",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/likeProductReviews.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/chat.ts",
+        "function": "chat",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/chat.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/checkKeys.ts",
+        "function": "checkKeys",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/checkKeys.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/checkKeys.ts",
+        "function": "nftUnlocked",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/checkKeys.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/nftMint.ts",
+        "function": "nftMintListener",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/nftMint.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/nftMint.ts",
+        "function": "walletNFTVerify",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/nftMint.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/web3Wallet.ts",
+        "function": "contractExploitListener",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/web3Wallet.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/b2bOrder.ts",
+        "function": "b2bOrder",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/b2bOrder.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/easterEgg.ts",
+        "function": "serveEasterEgg",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/easterEgg.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/premiumReward.ts",
+        "function": "servePremiumContent",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/premiumReward.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/privacyPolicyProof.ts",
+        "function": "servePrivacyPolicyProof",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/privacyPolicyProof.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/redirect.ts",
+        "function": "performRedirect",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/redirect.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/videoHandler.ts",
+        "function": "promotionVideo",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/videoHandler.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/videoHandler.ts",
+        "function": "getVideo",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/videoHandler.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/userProfile.ts",
+        "function": "getUserProfile",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/userProfile.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/updateUserProfile.ts",
+        "function": "updateUserProfile",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/updateUserProfile.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/vulnCodeSnippet.ts",
+        "function": "serveCodeSnippet",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/vulnCodeSnippet.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/vulnCodeSnippet.ts",
+        "function": "checkVulnLines",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/vulnCodeSnippet.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/vulnCodeFixes.ts",
+        "function": "serveCodeFixes",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/vulnCodeFixes.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/vulnCodeFixes.ts",
+        "function": "checkCorrectFix",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/vulnCodeFixes.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/metrics.ts",
+        "function": "serveMetrics",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/metrics.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/angular.ts",
+        "function": "serveAngularClient",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/angular.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/verify.ts",
+        "function": "errorHandlingChallenge",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/verify.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/lib/startup/restoreOverwrittenFilesWithOriginals.ts",
+        "function": "restoreOverwrittenFilesWithOriginals",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/lib/startup/restoreOverwrittenFilesWithOriginals.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "sanitizeFilename",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/metrics.ts",
+        "function": "observeMetrics",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/metrics.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "version",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/routes/metrics.ts",
+        "function": "updateLoop",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/routes/metrics.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "function": "registerWebsocketEvents",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/lib/startup/registerWebsocketEvents.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/models/index.ts",
+        "function": "createSequelize",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/models/index.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/models/index.ts",
+        "function": "initModels",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/models/index.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/models/index.ts",
+        "function": "setSequelize",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/models/index.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts",
+        "function": "close",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts",
+        "function": "close",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/server.ts",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_2.ts",
+        "function": "close",
+        "caller": "juice-shop/server.ts",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/hacking-instructor/challenges/forgedFeedback.ts",
+        "target_file": "juice-shop/frontend/src/hacking-instructor/helpers/helpers.ts",
+        "function": "sleep",
+        "caller": "juice-shop/frontend/src/hacking-instructor/challenges/forgedFeedback.ts",
+        "callee": "juice-shop/frontend/src/hacking-instructor/helpers/helpers.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/hacking-instructor/challenges/forgedFeedback.ts",
+        "target_file": "juice-shop/routes/likeProductReviews.ts",
+        "function": "sleep",
+        "caller": "juice-shop/frontend/src/hacking-instructor/challenges/forgedFeedback.ts",
+        "callee": "juice-shop/routes/likeProductReviews.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/hacking-instructor/challenges/forgedFeedback.ts",
+        "target_file": "juice-shop/frontend/src/hacking-instructor/helpers/helpers.ts",
+        "function": "waitForElementToGetClicked",
+        "caller": "juice-shop/frontend/src/hacking-instructor/challenges/forgedFeedback.ts",
+        "callee": "juice-shop/frontend/src/hacking-instructor/helpers/helpers.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/hacking-instructor/challenges/forgedFeedback.ts",
+        "target_file": "juice-shop/frontend/src/hacking-instructor/helpers/helpers.ts",
+        "function": "waitInMs",
+        "caller": "juice-shop/frontend/src/hacking-instructor/challenges/forgedFeedback.ts",
+        "callee": "juice-shop/frontend/src/hacking-instructor/helpers/helpers.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/hacking-instructor/helpers/helpers.ts",
+        "target_file": "juice-shop/routes/likeProductReviews.ts",
+        "function": "sleep",
+        "caller": "juice-shop/frontend/src/hacking-instructor/helpers/helpers.ts",
+        "callee": "juice-shop/routes/likeProductReviews.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/app.routing.ts",
+        "target_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts",
+        "function": "token1",
+        "caller": "juice-shop/frontend/src/app/app.routing.ts",
+        "callee": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/app.routing.ts",
+        "target_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts",
+        "function": "token1",
+        "caller": "juice-shop/frontend/src/app/app.routing.ts",
+        "callee": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/app.routing.ts",
+        "target_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts",
+        "function": "token2",
+        "caller": "juice-shop/frontend/src/app/app.routing.ts",
+        "callee": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/app.routing.ts",
+        "target_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts",
+        "function": "token2",
+        "caller": "juice-shop/frontend/src/app/app.routing.ts",
+        "callee": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/password-strength-info/password-strength-info.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts",
+        "function": "createComponent",
+        "caller": "juice-shop/frontend/src/app/password-strength-info/password-strength-info.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/accounting/accounting.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts",
+        "function": "createComponent",
+        "caller": "juice-shop/frontend/src/app/accounting/accounting.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/navbar/navbar.component.spec.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "isAccounting",
+        "caller": "juice-shop/frontend/src/app/navbar/navbar.component.spec.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/coding-challenge-page/components/coding-challenge-find-it/coding-challenge-find-it.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts",
+        "function": "createComponent",
+        "caller": "juice-shop/frontend/src/app/coding-challenge-page/components/coding-challenge-find-it/coding-challenge-find-it.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/coding-challenge-page/components/coding-challenge-find-it/coding-challenge-find-it.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/coding-challenge-page/components/coding-challenge-find-it/format-selected-lines.ts",
+        "function": "formatSelectedLines",
+        "caller": "juice-shop/frontend/src/app/coding-challenge-page/components/coding-challenge-find-it/coding-challenge-find-it.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/coding-challenge-page/components/coding-challenge-find-it/format-selected-lines.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/coding-challenge-page/helpers/handle-verdict.ts",
+        "target_file": "juice-shop/routes/continueCode.ts",
+        "function": "continueCodeFindIt",
+        "caller": "juice-shop/frontend/src/app/coding-challenge-page/helpers/handle-verdict.ts",
+        "callee": "juice-shop/routes/continueCode.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/coding-challenge-page/helpers/handle-verdict.ts",
+        "target_file": "juice-shop/routes/continueCode.ts",
+        "function": "continueCodeFixIt",
+        "caller": "juice-shop/frontend/src/app/coding-challenge-page/helpers/handle-verdict.ts",
+        "callee": "juice-shop/routes/continueCode.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/coding-challenge-page/helpers/handle-verdict.ts",
+        "target_file": "juice-shop/frontend/src/confetti/index.ts",
+        "function": "shootConfetti",
+        "caller": "juice-shop/frontend/src/app/coding-challenge-page/helpers/handle-verdict.ts",
+        "callee": "juice-shop/frontend/src/confetti/index.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/delivery-method/delivery-method.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts",
+        "function": "createComponent",
+        "caller": "juice-shop/frontend/src/app/delivery-method/delivery-method.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/delivery-method/delivery-method.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/address/address.component.spec.ts",
+        "function": "renderWith",
+        "caller": "juice-shop/frontend/src/app/delivery-method/delivery-method.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/address/address.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/delivery-method/delivery-method.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/track-result/track-result.component.spec.ts",
+        "function": "renderWith",
+        "caller": "juice-shop/frontend/src/app/delivery-method/delivery-method.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/track-result/track-result.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/delivery-method/delivery-method.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/challenge-status-badge/challenge-status-badge.component.spec.ts",
+        "function": "renderWith",
+        "caller": "juice-shop/frontend/src/app/delivery-method/delivery-method.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/challenge-status-badge/challenge-status-badge.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/score-board/score-board.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts",
+        "function": "createComponent",
+        "caller": "juice-shop/frontend/src/app/score-board/score-board.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/score-board/score-board.component.spec.ts",
+        "target_file": "juice-shop/lib/accuracy.ts",
+        "function": "reset",
+        "caller": "juice-shop/frontend/src/app/score-board/score-board.component.spec.ts",
+        "callee": "juice-shop/lib/accuracy.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/score-board/score-board.component.spec.ts",
+        "target_file": "juice-shop/lib/antiCheat.ts",
+        "function": "reset",
+        "caller": "juice-shop/frontend/src/app/score-board/score-board.component.spec.ts",
+        "callee": "juice-shop/lib/antiCheat.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/score-board/components/challenge-card/challenge-card.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts",
+        "function": "createComponent",
+        "caller": "juice-shop/frontend/src/app/score-board/components/challenge-card/challenge-card.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/score-board/components/challenge-card/challenge-card.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/hacking-instructor/index.ts",
+        "function": "createElement",
+        "caller": "juice-shop/frontend/src/app/score-board/components/challenge-card/challenge-card.component.spec.ts",
+        "callee": "juice-shop/frontend/src/hacking-instructor/index.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/score-board/components/challenge-card/challenge-card.component.spec.ts",
+        "target_file": "juice-shop/routes/2fa.ts",
+        "function": "setup",
+        "caller": "juice-shop/frontend/src/app/score-board/components/challenge-card/challenge-card.component.spec.ts",
+        "callee": "juice-shop/routes/2fa.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/score-board/components/challenge-card/challenge-card.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/hacking-instructor/index.ts",
+        "function": "hasInstructions",
+        "caller": "juice-shop/frontend/src/app/score-board/components/challenge-card/challenge-card.component.spec.ts",
+        "callee": "juice-shop/frontend/src/hacking-instructor/index.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/score-board/components/challenge-card/challenge-card.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/hacking-instructor/index.ts",
+        "function": "startHackingInstructorFor",
+        "caller": "juice-shop/frontend/src/app/score-board/components/challenge-card/challenge-card.component.spec.ts",
+        "callee": "juice-shop/frontend/src/hacking-instructor/index.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/payment/payment.component.ts",
+        "target_file": "juice-shop/routes/coupon.ts",
+        "function": "applyCoupon",
+        "caller": "juice-shop/frontend/src/app/payment/payment.component.ts",
+        "callee": "juice-shop/routes/coupon.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/payment/payment.component.ts",
+        "target_file": "juice-shop/routes/deluxe.ts",
+        "function": "upgradeToDeluxe",
+        "caller": "juice-shop/frontend/src/app/payment/payment.component.ts",
+        "callee": "juice-shop/routes/deluxe.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/payment/payment.component.spec.ts",
+        "target_file": "juice-shop/routes/coupon.ts",
+        "function": "applyCoupon",
+        "caller": "juice-shop/frontend/src/app/payment/payment.component.spec.ts",
+        "callee": "juice-shop/routes/coupon.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/photo-wall/photo-wall.component.ts",
+        "target_file": "juice-shop/routes/memory.ts",
+        "function": "addMemory",
+        "caller": "juice-shop/frontend/src/app/photo-wall/photo-wall.component.ts",
+        "callee": "juice-shop/routes/memory.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/shared/codemirror-extensions.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/shared/codemirror-extensions.ts",
+        "function": "detectLanguage",
+        "caller": "juice-shop/frontend/src/app/shared/codemirror-extensions.spec.ts",
+        "callee": "juice-shop/frontend/src/app/shared/codemirror-extensions.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/about/about.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts",
+        "function": "createComponent",
+        "caller": "juice-shop/frontend/src/app/about/about.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/address/address.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts",
+        "function": "createComponent",
+        "caller": "juice-shop/frontend/src/app/address/address.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/web3-sandbox/web3-sandbox.component.ts",
+        "target_file": "juice-shop/frontend/src/app/shared/codemirror-theme.ts",
+        "function": "juiceShopTheme",
+        "caller": "juice-shop/frontend/src/app/web3-sandbox/web3-sandbox.component.ts",
+        "callee": "juice-shop/frontend/src/app/shared/codemirror-theme.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/web3-sandbox/web3-sandbox.component.ts",
+        "target_file": "juice-shop/frontend/src/app/shared/codemirror-extensions.ts",
+        "function": "getLanguageExtension",
+        "caller": "juice-shop/frontend/src/app/web3-sandbox/web3-sandbox.component.ts",
+        "callee": "juice-shop/frontend/src/app/shared/codemirror-extensions.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/payment-method/payment-method.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts",
+        "function": "createComponent",
+        "caller": "juice-shop/frontend/src/app/payment-method/payment-method.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/test/api/helpers/auth.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/test/api/helpers/auth.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginBenderChallenge_2_correct.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/data/static/codefixes/loginBenderChallenge_2_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginJimChallenge_1_correct.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/data/static/codefixes/loginJimChallenge_1_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginAdminChallenge_1.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/data/static/codefixes/loginAdminChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginBenderChallenge_4.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/data/static/codefixes/loginBenderChallenge_4.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginJimChallenge_4.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/data/static/codefixes/loginJimChallenge_4.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginBenderChallenge_1.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/data/static/codefixes/loginBenderChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginAdminChallenge_4_correct.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/data/static/codefixes/loginAdminChallenge_4_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginAdminChallenge_3.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/data/static/codefixes/loginAdminChallenge_3.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginJimChallenge_3.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/data/static/codefixes/loginJimChallenge_3.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginBenderChallenge_3.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/data/static/codefixes/loginBenderChallenge_3.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginAdminChallenge_2.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/data/static/codefixes/loginAdminChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/data/static/codefixes/loginJimChallenge_2.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/data/static/codefixes/loginJimChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "target_file": "juice-shop/routes/login.ts",
+        "function": "login",
+        "caller": "juice-shop/frontend/src/app/login/login.component.spec.ts",
+        "callee": "juice-shop/routes/login.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/order-history/order-history.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts",
+        "function": "createComponent",
+        "caller": "juice-shop/frontend/src/app/order-history/order-history.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/challenge-status-badge/challenge-status-badge.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts",
+        "function": "createComponent",
+        "caller": "juice-shop/frontend/src/app/challenge-status-badge/challenge-status-badge.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/search-result/search-result.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/hacking-instructor/index.ts",
+        "function": "createElement",
+        "caller": "juice-shop/frontend/src/app/search-result/search-result.component.spec.ts",
+        "callee": "juice-shop/frontend/src/hacking-instructor/index.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/search-result/search-result.component.spec.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "isDeluxe",
+        "caller": "juice-shop/frontend/src/app/search-result/search-result.component.spec.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/app/search-result/search-result.component.spec.ts",
+        "target_file": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts",
+        "function": "createComponent",
+        "caller": "juice-shop/frontend/src/app/search-result/search-result.component.spec.ts",
+        "callee": "juice-shop/frontend/src/app/coding-challenge-page/coding-challenge-page.component.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/confetti/index.ts",
+        "target_file": "juice-shop/frontend/src/hacking-instructor/index.ts",
+        "function": "createElement",
+        "caller": "juice-shop/frontend/src/confetti/index.ts",
+        "callee": "juice-shop/frontend/src/hacking-instructor/index.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/dat.gui.min.js",
+        "target_file": "juice-shop/frontend/src/hacking-instructor/index.ts",
+        "function": "createElement",
+        "caller": "juice-shop/frontend/src/assets/private/dat.gui.min.js",
+        "callee": "juice-shop/frontend/src/hacking-instructor/index.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/dat.gui.min.js",
+        "target_file": "juice-shop/frontend/src/assets/private/three.js",
+        "function": "v",
+        "caller": "juice-shop/frontend/src/assets/private/dat.gui.min.js",
+        "callee": "juice-shop/frontend/src/assets/private/three.js"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/three.js",
+        "target_file": "juice-shop/frontend/src/app/shared/codemirror-extensions.spec.ts",
+        "function": "add",
+        "caller": "juice-shop/frontend/src/assets/private/three.js",
+        "callee": "juice-shop/frontend/src/app/shared/codemirror-extensions.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/three.js",
+        "target_file": "juice-shop/server.ts",
+        "function": "start",
+        "caller": "juice-shop/frontend/src/assets/private/three.js",
+        "callee": "juice-shop/server.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/three.js",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts",
+        "function": "start",
+        "caller": "juice-shop/frontend/src/assets/private/three.js",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/three.js",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts",
+        "function": "start",
+        "caller": "juice-shop/frontend/src/assets/private/three.js",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/three.js",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_2.ts",
+        "function": "start",
+        "caller": "juice-shop/frontend/src/assets/private/three.js",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/three.js",
+        "target_file": "juice-shop/frontend/src/hacking-instructor/index.ts",
+        "function": "createElement",
+        "caller": "juice-shop/frontend/src/assets/private/three.js",
+        "callee": "juice-shop/frontend/src/hacking-instructor/index.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/three.js",
+        "target_file": "juice-shop/rsn/rsn.ts",
+        "function": "main",
+        "caller": "juice-shop/frontend/src/assets/private/three.js",
+        "callee": "juice-shop/rsn/rsn.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/three.js",
+        "target_file": "juice-shop/lib/scripts/lintConfig.ts",
+        "function": "main",
+        "caller": "juice-shop/frontend/src/assets/private/three.js",
+        "callee": "juice-shop/lib/scripts/lintConfig.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/three.js",
+        "target_file": "juice-shop/routes/2fa.ts",
+        "function": "disable",
+        "caller": "juice-shop/frontend/src/assets/private/three.js",
+        "callee": "juice-shop/routes/2fa.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/three.js",
+        "target_file": "juice-shop/frontend/src/assets/private/dat.gui.min.js",
+        "function": "u",
+        "caller": "juice-shop/frontend/src/assets/private/three.js",
+        "callee": "juice-shop/frontend/src/assets/private/dat.gui.min.js"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/three.js",
+        "target_file": "juice-shop/lib/accuracy.ts",
+        "function": "reset",
+        "caller": "juice-shop/frontend/src/assets/private/three.js",
+        "callee": "juice-shop/lib/accuracy.ts"
+    },
+    {
+        "source_file": "juice-shop/frontend/src/assets/private/three.js",
+        "target_file": "juice-shop/lib/antiCheat.ts",
+        "function": "reset",
+        "caller": "juice-shop/frontend/src/assets/private/three.js",
+        "callee": "juice-shop/lib/antiCheat.ts"
+    },
+    {
+        "source_file": "juice-shop/rsn/rsnUtil.ts",
+        "target_file": "juice-shop/routes/vulnCodeSnippet.ts",
+        "function": "retrieveCodeSnippet",
+        "caller": "juice-shop/rsn/rsnUtil.ts",
+        "callee": "juice-shop/routes/vulnCodeSnippet.ts"
+    },
+    {
+        "source_file": "juice-shop/rsn/rsn.ts",
+        "target_file": "juice-shop/rsn/rsnUtil.ts",
+        "function": "readFiles",
+        "caller": "juice-shop/rsn/rsn.ts",
+        "callee": "juice-shop/rsn/rsnUtil.ts"
+    },
+    {
+        "source_file": "juice-shop/rsn/rsn.ts",
+        "target_file": "juice-shop/rsn/rsnUtil.ts",
+        "function": "computeDiffs",
+        "caller": "juice-shop/rsn/rsn.ts",
+        "callee": "juice-shop/rsn/rsnUtil.ts"
+    },
+    {
+        "source_file": "juice-shop/rsn/rsn.ts",
+        "target_file": "juice-shop/rsn/rsnUtil.ts",
+        "function": "getDataFromFile",
+        "caller": "juice-shop/rsn/rsn.ts",
+        "callee": "juice-shop/rsn/rsnUtil.ts"
+    },
+    {
+        "source_file": "juice-shop/rsn/rsn.ts",
+        "target_file": "juice-shop/rsn/rsnUtil.ts",
+        "function": "findChangedFiles",
+        "caller": "juice-shop/rsn/rsn.ts",
+        "callee": "juice-shop/rsn/rsnUtil.ts"
+    },
+    {
+        "source_file": "juice-shop/rsn/rsn.ts",
+        "target_file": "juice-shop/rsn/rsnOutput.ts",
+        "function": "printSuccess",
+        "caller": "juice-shop/rsn/rsn.ts",
+        "callee": "juice-shop/rsn/rsnOutput.ts"
+    },
+    {
+        "source_file": "juice-shop/rsn/rsn.ts",
+        "target_file": "juice-shop/rsn/rsnOutput.ts",
+        "function": "printChangeSummary",
+        "caller": "juice-shop/rsn/rsn.ts",
+        "callee": "juice-shop/rsn/rsnOutput.ts"
+    },
+    {
+        "source_file": "juice-shop/rsn/rsn.ts",
+        "target_file": "juice-shop/rsn/rsnUtil.ts",
+        "function": "computeChallengeDiff",
+        "caller": "juice-shop/rsn/rsn.ts",
+        "callee": "juice-shop/rsn/rsnUtil.ts"
+    },
+    {
+        "source_file": "juice-shop/rsn/rsn.ts",
+        "target_file": "juice-shop/rsn/rsnOutput.ts",
+        "function": "printChallengeDiff",
+        "caller": "juice-shop/rsn/rsn.ts",
+        "callee": "juice-shop/rsn/rsnOutput.ts"
+    },
+    {
+        "source_file": "juice-shop/rsn/rsn.ts",
+        "target_file": "juice-shop/rsn/rsnOutput.ts",
+        "function": "printUpdateInstructions",
+        "caller": "juice-shop/rsn/rsn.ts",
+        "callee": "juice-shop/rsn/rsnOutput.ts"
+    },
+    {
+        "source_file": "juice-shop/models/product.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "isChallengeEnabled",
+        "caller": "juice-shop/models/product.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/models/relations.ts",
+        "target_file": "juice-shop/lib/noUpdate.ts",
+        "function": "makeKeyNonUpdatable",
+        "caller": "juice-shop/models/relations.ts",
+        "callee": "juice-shop/lib/noUpdate.ts"
+    },
+    {
+        "source_file": "juice-shop/models/feedback.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "isChallengeEnabled",
+        "caller": "juice-shop/models/feedback.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/models/feedback.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "sanitizeHtml",
+        "caller": "juice-shop/models/feedback.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/address.ts",
+        "function": "AddressModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/address.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/basket.ts",
+        "function": "BasketModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/basket.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/basketitem.ts",
+        "function": "BasketItemModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/basketitem.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/captcha.ts",
+        "function": "CaptchaModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/captcha.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/card.ts",
+        "function": "CardModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/card.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/challenge.ts",
+        "function": "ChallengeModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/challenge.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/challengeDependency.ts",
+        "function": "ChallengeDependencyModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/challengeDependency.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/complaint.ts",
+        "function": "ComplaintModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/complaint.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/delivery.ts",
+        "function": "DeliveryModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/delivery.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/feedback.ts",
+        "function": "FeedbackModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/feedback.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/hint.ts",
+        "function": "HintModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/hint.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/imageCaptcha.ts",
+        "function": "ImageCaptchaModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/imageCaptcha.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/memory.ts",
+        "function": "MemoryModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/memory.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/privacyRequests.ts",
+        "function": "PrivacyRequestModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/privacyRequests.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/product.ts",
+        "function": "ProductModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/product.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/quantity.ts",
+        "function": "QuantityModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/quantity.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/recycle.ts",
+        "function": "RecycleModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/recycle.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/securityAnswer.ts",
+        "function": "SecurityAnswerModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/securityAnswer.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/securityQuestion.ts",
+        "function": "SecurityQuestionModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/securityQuestion.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/user.ts",
+        "function": "UserModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/user.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/wallet.ts",
+        "function": "WalletModelInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/wallet.ts"
+    },
+    {
+        "source_file": "juice-shop/models/index.ts",
+        "target_file": "juice-shop/models/relations.ts",
+        "function": "relationsInit",
+        "caller": "juice-shop/models/index.ts",
+        "callee": "juice-shop/models/relations.ts"
+    },
+    {
+        "source_file": "juice-shop/models/securityAnswer.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hmac",
+        "caller": "juice-shop/models/securityAnswer.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/models/user.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "isChallengeEnabled",
+        "caller": "juice-shop/models/user.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/models/user.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "sanitizeLegacy",
+        "caller": "juice-shop/models/user.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/models/user.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/models/user.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/antiCheat.ts",
+        "target_file": "juice-shop/routes/vulnCodeSnippet.ts",
+        "function": "retrieveCodeSnippet",
+        "caller": "juice-shop/lib/antiCheat.ts",
+        "callee": "juice-shop/routes/vulnCodeSnippet.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/antiCheat.ts",
+        "target_file": "juice-shop/routes/vulnCodeFixes.ts",
+        "function": "readFixes",
+        "caller": "juice-shop/lib/antiCheat.ts",
+        "callee": "juice-shop/routes/vulnCodeFixes.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/antiCheat.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "diceCoefficient",
+        "caller": "juice-shop/lib/antiCheat.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/antiCheat.ts",
+        "target_file": "juice-shop/lib/codingChallenges.ts",
+        "function": "getCodeChallenges",
+        "caller": "juice-shop/lib/antiCheat.ts",
+        "callee": "juice-shop/lib/codingChallenges.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/utils.ts",
+        "target_file": "juice-shop/lib/is-docker.ts",
+        "function": "isDocker",
+        "caller": "juice-shop/lib/utils.ts",
+        "callee": "juice-shop/lib/is-docker.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/utils.ts",
+        "target_file": "juice-shop/lib/is-windows.ts",
+        "function": "isWindows",
+        "caller": "juice-shop/lib/utils.ts",
+        "callee": "juice-shop/lib/is-windows.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/utils.ts",
+        "target_file": "juice-shop/server.ts",
+        "function": "close",
+        "caller": "juice-shop/lib/utils.ts",
+        "callee": "juice-shop/server.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/utils.ts",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts",
+        "function": "close",
+        "caller": "juice-shop/lib/utils.ts",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/utils.ts",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts",
+        "function": "close",
+        "caller": "juice-shop/lib/utils.ts",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/utils.ts",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_2.ts",
+        "function": "close",
+        "caller": "juice-shop/lib/utils.ts",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/insecurity.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "jwtFrom",
+        "caller": "juice-shop/lib/insecurity.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/insecurity.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "toMMMYY",
+        "caller": "juice-shop/lib/insecurity.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/insecurity.ts",
+        "target_file": "juice-shop/routes/2fa.ts",
+        "function": "verify",
+        "caller": "juice-shop/lib/insecurity.ts",
+        "callee": "juice-shop/routes/2fa.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/insecurity.ts",
+        "target_file": "juice-shop/routes/fileServer.ts",
+        "function": "verify",
+        "caller": "juice-shop/lib/insecurity.ts",
+        "callee": "juice-shop/routes/fileServer.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/insecurity.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/lib/insecurity.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/challengeUtils.ts",
+        "target_file": "juice-shop/lib/accuracy.ts",
+        "function": "storeFindItVerdict",
+        "caller": "juice-shop/lib/challengeUtils.ts",
+        "callee": "juice-shop/lib/accuracy.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/challengeUtils.ts",
+        "target_file": "juice-shop/lib/accuracy.ts",
+        "function": "calculateFindItAccuracy",
+        "caller": "juice-shop/lib/challengeUtils.ts",
+        "callee": "juice-shop/lib/accuracy.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/challengeUtils.ts",
+        "target_file": "juice-shop/lib/antiCheat.ts",
+        "function": "calculateFindItCheatScore",
+        "caller": "juice-shop/lib/challengeUtils.ts",
+        "callee": "juice-shop/lib/antiCheat.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/challengeUtils.ts",
+        "target_file": "juice-shop/lib/accuracy.ts",
+        "function": "storeFixItVerdict",
+        "caller": "juice-shop/lib/challengeUtils.ts",
+        "callee": "juice-shop/lib/accuracy.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/challengeUtils.ts",
+        "target_file": "juice-shop/lib/accuracy.ts",
+        "function": "calculateFixItAccuracy",
+        "caller": "juice-shop/lib/challengeUtils.ts",
+        "callee": "juice-shop/lib/accuracy.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/challengeUtils.ts",
+        "target_file": "juice-shop/lib/antiCheat.ts",
+        "function": "calculateFixItCheatScore",
+        "caller": "juice-shop/lib/challengeUtils.ts",
+        "callee": "juice-shop/lib/antiCheat.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/codingChallenges.ts",
+        "target_file": "juice-shop/server.ts",
+        "function": "start",
+        "caller": "juice-shop/lib/codingChallenges.ts",
+        "callee": "juice-shop/server.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/codingChallenges.ts",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts",
+        "function": "start",
+        "caller": "juice-shop/lib/codingChallenges.ts",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/codingChallenges.ts",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts",
+        "function": "start",
+        "caller": "juice-shop/lib/codingChallenges.ts",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/codingChallenges.ts",
+        "target_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_2.ts",
+        "function": "start",
+        "caller": "juice-shop/lib/codingChallenges.ts",
+        "callee": "juice-shop/data/static/codefixes/exposedMetricsChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/webhook.ts",
+        "target_file": "juice-shop/lib/antiCheat.ts",
+        "function": "totalCheatScore",
+        "caller": "juice-shop/lib/webhook.ts",
+        "callee": "juice-shop/lib/antiCheat.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/webhook.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "ctfFlag",
+        "caller": "juice-shop/lib/webhook.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/webhook.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "version",
+        "caller": "juice-shop/lib/webhook.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/customizeApplication.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "isUrl",
+        "caller": "juice-shop/lib/startup/customizeApplication.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/customizeApplication.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "extractFilename",
+        "caller": "juice-shop/lib/startup/customizeApplication.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/customizeApplication.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "downloadToFile",
+        "caller": "juice-shop/lib/startup/customizeApplication.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/validatePreconditions.ts",
+        "target_file": "juice-shop/lib/startup/validateDependencies.ts",
+        "function": "validateDependencies",
+        "caller": "juice-shop/lib/startup/validatePreconditions.ts",
+        "callee": "juice-shop/lib/startup/validateDependencies.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/validatePreconditions.ts",
+        "target_file": "juice-shop/frontend/src/confetti/index.ts",
+        "function": "timeout",
+        "caller": "juice-shop/lib/startup/validatePreconditions.ts",
+        "callee": "juice-shop/frontend/src/confetti/index.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/validateDependencies.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/lib/startup/validateDependencies.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/restoreOverwrittenFilesWithOriginals.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/lib/startup/restoreOverwrittenFilesWithOriginals.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/customizeEasterEgg.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "isUrl",
+        "caller": "juice-shop/lib/startup/customizeEasterEgg.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/customizeEasterEgg.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "extractFilename",
+        "caller": "juice-shop/lib/startup/customizeEasterEgg.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/customizeEasterEgg.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "downloadToFile",
+        "caller": "juice-shop/lib/startup/customizeEasterEgg.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/cleanupFtpFolder.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/lib/startup/cleanupFtpFolder.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectChallenge_1.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_2.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectChallenge_4_correct.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectChallenge_4_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectChallenge_3.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectChallenge_3.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_3_correct.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_3_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_1.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_4.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_4.ts"
+    },
+    {
+        "source_file": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectChallenge_2.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/data/datacreator.ts",
+        "target_file": "juice-shop/data/staticData.ts",
+        "function": "loadStaticChallengeData",
+        "caller": "juice-shop/data/datacreator.ts",
+        "callee": "juice-shop/data/staticData.ts"
+    },
+    {
+        "source_file": "juice-shop/data/datacreator.ts",
+        "target_file": "juice-shop/lib/codingChallenges.ts",
+        "function": "getCodeChallenges",
+        "caller": "juice-shop/data/datacreator.ts",
+        "callee": "juice-shop/lib/codingChallenges.ts"
+    },
+    {
+        "source_file": "juice-shop/data/datacreator.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/data/datacreator.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/data/datacreator.ts",
+        "target_file": "juice-shop/data/staticData.ts",
+        "function": "loadStaticUserData",
+        "caller": "juice-shop/data/datacreator.ts",
+        "callee": "juice-shop/data/staticData.ts"
+    },
+    {
+        "source_file": "juice-shop/data/datacreator.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "deluxeToken",
+        "caller": "juice-shop/data/datacreator.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/datacreator.ts",
+        "target_file": "juice-shop/data/staticData.ts",
+        "function": "loadStaticDeliveryData",
+        "caller": "juice-shop/data/datacreator.ts",
+        "callee": "juice-shop/data/staticData.ts"
+    },
+    {
+        "source_file": "juice-shop/data/datacreator.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "isUrl",
+        "caller": "juice-shop/data/datacreator.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/data/datacreator.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "extractFilename",
+        "caller": "juice-shop/data/datacreator.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/data/datacreator.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "downloadToFile",
+        "caller": "juice-shop/data/datacreator.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/data/datacreator.ts",
+        "target_file": "juice-shop/data/datacache.ts",
+        "function": "setRetrieveBlueprintChallengeFile",
+        "caller": "juice-shop/data/datacreator.ts",
+        "callee": "juice-shop/data/datacache.ts"
+    },
+    {
+        "source_file": "juice-shop/data/datacreator.ts",
+        "target_file": "juice-shop/data/staticData.ts",
+        "function": "loadStaticSecurityQuestionsData",
+        "caller": "juice-shop/data/datacreator.ts",
+        "callee": "juice-shop/data/staticData.ts"
+    },
+    {
+        "source_file": "juice-shop/data/datacreator.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/data/datacreator.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts",
+        "target_file": "juice-shop/routes/metrics.ts",
+        "function": "updateLoop",
+        "caller": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts",
+        "callee": "juice-shop/routes/metrics.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts",
+        "target_file": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "function": "registerWebsocketEvents",
+        "caller": "juice-shop/data/static/codefixes/exposedMetricsChallenge_1.ts",
+        "callee": "juice-shop/lib/startup/registerWebsocketEvents.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginBenderChallenge_2_correct.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/data/static/codefixes/loginBenderChallenge_2_correct.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginBenderChallenge_2_correct.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/data/static/codefixes/loginBenderChallenge_2_correct.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginJimChallenge_1_correct.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/data/static/codefixes/loginJimChallenge_1_correct.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginJimChallenge_1_correct.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/data/static/codefixes/loginJimChallenge_1_correct.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginAdminChallenge_1.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/data/static/codefixes/loginAdminChallenge_1.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginAdminChallenge_1.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/data/static/codefixes/loginAdminChallenge_1.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_4.ts",
+        "target_file": "juice-shop/routes/chat.ts",
+        "function": "getUserId",
+        "caller": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_4.ts",
+        "callee": "juice-shop/routes/chat.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_4.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "generateCoupon",
+        "caller": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_4.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts",
+        "target_file": "juice-shop/frontend/src/app/app.routing.ts",
+        "function": "token1",
+        "caller": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts",
+        "callee": "juice-shop/frontend/src/app/app.routing.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts",
+        "target_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts",
+        "function": "token1",
+        "caller": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts",
+        "callee": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts",
+        "target_file": "juice-shop/frontend/src/app/app.routing.ts",
+        "function": "token2",
+        "caller": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts",
+        "callee": "juice-shop/frontend/src/app/app.routing.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts",
+        "target_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts",
+        "function": "token2",
+        "caller": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts",
+        "callee": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginBenderChallenge_4.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/data/static/codefixes/loginBenderChallenge_4.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginBenderChallenge_4.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/data/static/codefixes/loginBenderChallenge_4.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginJimChallenge_4.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/data/static/codefixes/loginJimChallenge_4.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginJimChallenge_4.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/data/static/codefixes/loginJimChallenge_4.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_1.ts",
+        "target_file": "juice-shop/routes/chat.ts",
+        "function": "getUserId",
+        "caller": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_1.ts",
+        "callee": "juice-shop/routes/chat.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_1.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "generateCoupon",
+        "caller": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_1.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginBenderChallenge_1.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/data/static/codefixes/loginBenderChallenge_1.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginBenderChallenge_1.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/data/static/codefixes/loginBenderChallenge_1.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginAdminChallenge_4_correct.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/data/static/codefixes/loginAdminChallenge_4_correct.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginAdminChallenge_4_correct.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/data/static/codefixes/loginAdminChallenge_4_correct.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginAdminChallenge_3.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/data/static/codefixes/loginAdminChallenge_3.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginJimChallenge_3.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/data/static/codefixes/loginJimChallenge_3.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginBenderChallenge_3.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/data/static/codefixes/loginBenderChallenge_3.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginBenderChallenge_3.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/data/static/codefixes/loginBenderChallenge_3.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginAdminChallenge_2.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/data/static/codefixes/loginAdminChallenge_2.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginAdminChallenge_2.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/data/static/codefixes/loginAdminChallenge_2.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginJimChallenge_2.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/data/static/codefixes/loginJimChallenge_2.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/loginJimChallenge_2.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/data/static/codefixes/loginJimChallenge_2.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts",
+        "target_file": "juice-shop/routes/metrics.ts",
+        "function": "updateLoop",
+        "caller": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts",
+        "callee": "juice-shop/routes/metrics.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts",
+        "target_file": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "function": "registerWebsocketEvents",
+        "caller": "juice-shop/data/static/codefixes/exposedMetricsChallenge_3_correct.ts",
+        "callee": "juice-shop/lib/startup/registerWebsocketEvents.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts",
+        "target_file": "juice-shop/frontend/src/app/app.routing.ts",
+        "function": "token1",
+        "caller": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts",
+        "callee": "juice-shop/frontend/src/app/app.routing.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts",
+        "target_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts",
+        "function": "token1",
+        "caller": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts",
+        "callee": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts",
+        "target_file": "juice-shop/frontend/src/app/app.routing.ts",
+        "function": "token2",
+        "caller": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts",
+        "callee": "juice-shop/frontend/src/app/app.routing.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts",
+        "target_file": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts",
+        "function": "token2",
+        "caller": "juice-shop/data/static/codefixes/tokenSaleChallenge_2.ts",
+        "callee": "juice-shop/data/static/codefixes/tokenSaleChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_3.ts",
+        "target_file": "juice-shop/routes/chat.ts",
+        "function": "getUserId",
+        "caller": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_3.ts",
+        "callee": "juice-shop/routes/chat.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_3.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "generateCoupon",
+        "caller": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_3.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_2_correct.ts",
+        "target_file": "juice-shop/routes/chat.ts",
+        "function": "getUserId",
+        "caller": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_2_correct.ts",
+        "callee": "juice-shop/routes/chat.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_2_correct.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "generateCoupon",
+        "caller": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_2_correct.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/data/static/codefixes/exposedMetricsChallenge_2.ts",
+        "target_file": "juice-shop/lib/startup/registerWebsocketEvents.ts",
+        "function": "registerWebsocketEvents",
+        "caller": "juice-shop/data/static/codefixes/exposedMetricsChallenge_2.ts",
+        "callee": "juice-shop/lib/startup/registerWebsocketEvents.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/languages.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/routes/languages.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/login.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/routes/login.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/login.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/routes/login.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/login.ts",
+        "target_file": "juice-shop/lib/challengeUtils.ts",
+        "function": "notSolved",
+        "caller": "juice-shop/routes/login.ts",
+        "callee": "juice-shop/lib/challengeUtils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/lib/challengeUtils.ts",
+        "function": "notSolved",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/lib/challengeUtils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "isChallengeEnabled",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "jwtFrom",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "decode",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "verify",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/routes/2fa.ts",
+        "function": "verify",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/routes/2fa.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/routes/fileServer.ts",
+        "function": "verify",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/routes/fileServer.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/lib/antiCheat.ts",
+        "function": "checkForSourceFileOverlap",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/lib/antiCheat.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "diceCoefficient",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_4.ts",
+        "function": "buildSystemPrompt",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_4.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_1.ts",
+        "function": "buildSystemPrompt",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_3.ts",
+        "function": "buildSystemPrompt",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_3.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_2_correct.ts",
+        "function": "buildSystemPrompt",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_2_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/verify.ts",
+        "target_file": "juice-shop/routes/chat.ts",
+        "function": "buildSystemPrompt",
+        "caller": "juice-shop/routes/verify.ts",
+        "callee": "juice-shop/routes/chat.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/resetPassword.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hmac",
+        "caller": "juice-shop/routes/resetPassword.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/nftMint.ts",
+        "target_file": "juice-shop/frontend/src/app/shared/codemirror-extensions.spec.ts",
+        "function": "add",
+        "caller": "juice-shop/routes/nftMint.ts",
+        "callee": "juice-shop/frontend/src/app/shared/codemirror-extensions.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/nftMint.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/routes/nftMint.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/search.ts",
+        "target_file": "juice-shop/lib/challengeUtils.ts",
+        "function": "notSolved",
+        "caller": "juice-shop/routes/search.ts",
+        "callee": "juice-shop/lib/challengeUtils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/changePassword.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/routes/changePassword.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/profileImageUrlUpload.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/routes/profileImageUrlUpload.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/saveLoginIp.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "isChallengeEnabled",
+        "caller": "juice-shop/routes/saveLoginIp.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/saveLoginIp.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "toSimpleIpAddress",
+        "caller": "juice-shop/routes/saveLoginIp.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/2fa.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "decode",
+        "caller": "juice-shop/routes/2fa.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/2fa.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/routes/2fa.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/2fa.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/routes/2fa.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/2fa.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "verify",
+        "caller": "juice-shop/routes/2fa.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/2fa.ts",
+        "target_file": "juice-shop/routes/fileServer.ts",
+        "function": "verify",
+        "caller": "juice-shop/routes/2fa.ts",
+        "callee": "juice-shop/routes/fileServer.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/chat.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "jwtFrom",
+        "caller": "juice-shop/routes/chat.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/chat.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "decode",
+        "caller": "juice-shop/routes/chat.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/chat.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "generateCoupon",
+        "caller": "juice-shop/routes/chat.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/chat.ts",
+        "target_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_4.ts",
+        "function": "buildSystemPrompt",
+        "caller": "juice-shop/routes/chat.ts",
+        "callee": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_4.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/chat.ts",
+        "target_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_1.ts",
+        "function": "buildSystemPrompt",
+        "caller": "juice-shop/routes/chat.ts",
+        "callee": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/chat.ts",
+        "target_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_3.ts",
+        "function": "buildSystemPrompt",
+        "caller": "juice-shop/routes/chat.ts",
+        "callee": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_3.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/chat.ts",
+        "target_file": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_2_correct.ts",
+        "function": "buildSystemPrompt",
+        "caller": "juice-shop/routes/chat.ts",
+        "callee": "juice-shop/data/static/codefixes/chatbotGreedyInjectionChallenge_2_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/web3Wallet.ts",
+        "target_file": "juice-shop/frontend/src/app/shared/codemirror-extensions.spec.ts",
+        "function": "add",
+        "caller": "juice-shop/routes/web3Wallet.ts",
+        "callee": "juice-shop/frontend/src/app/shared/codemirror-extensions.spec.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/web3Wallet.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/routes/web3Wallet.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/vulnCodeFixes.ts",
+        "target_file": "juice-shop/lib/accuracy.ts",
+        "function": "storeFixItVerdict",
+        "caller": "juice-shop/routes/vulnCodeFixes.ts",
+        "callee": "juice-shop/lib/accuracy.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/fileUpload.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "isChallengeEnabled",
+        "caller": "juice-shop/routes/fileUpload.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/fileUpload.ts",
+        "target_file": "juice-shop/lib/xml.ts",
+        "function": "parseXmlString",
+        "caller": "juice-shop/routes/fileUpload.ts",
+        "callee": "juice-shop/lib/xml.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/fileUpload.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "matchesEtcPasswdFile",
+        "caller": "juice-shop/routes/fileUpload.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/fileUpload.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "matchesSystemIniFile",
+        "caller": "juice-shop/routes/fileUpload.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/fileUpload.ts",
+        "target_file": "juice-shop/lib/challengeUtils.ts",
+        "function": "notSolved",
+        "caller": "juice-shop/routes/fileUpload.ts",
+        "callee": "juice-shop/lib/challengeUtils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/basketItems.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "parseJsonCustom",
+        "caller": "juice-shop/routes/basketItems.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/basketItems.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "isDeluxe",
+        "caller": "juice-shop/routes/basketItems.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/trackOrder.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "isChallengeEnabled",
+        "caller": "juice-shop/routes/trackOrder.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/createProductReviews.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/routes/createProductReviews.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/currentUser.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "verify",
+        "caller": "juice-shop/routes/currentUser.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/currentUser.ts",
+        "target_file": "juice-shop/routes/2fa.ts",
+        "function": "verify",
+        "caller": "juice-shop/routes/currentUser.ts",
+        "callee": "juice-shop/routes/2fa.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/currentUser.ts",
+        "target_file": "juice-shop/routes/fileServer.ts",
+        "function": "verify",
+        "caller": "juice-shop/routes/currentUser.ts",
+        "callee": "juice-shop/routes/fileServer.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/deluxe.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "deluxeToken",
+        "caller": "juice-shop/routes/deluxe.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/deluxe.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "verify",
+        "caller": "juice-shop/routes/deluxe.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/deluxe.ts",
+        "target_file": "juice-shop/routes/2fa.ts",
+        "function": "verify",
+        "caller": "juice-shop/routes/deluxe.ts",
+        "callee": "juice-shop/routes/2fa.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/deluxe.ts",
+        "target_file": "juice-shop/routes/fileServer.ts",
+        "function": "verify",
+        "caller": "juice-shop/routes/deluxe.ts",
+        "callee": "juice-shop/routes/fileServer.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/deluxe.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "jwtFrom",
+        "caller": "juice-shop/routes/deluxe.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/deluxe.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/routes/deluxe.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/deluxe.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/routes/deluxe.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/deluxe.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "isCustomer",
+        "caller": "juice-shop/routes/deluxe.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/deluxe.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "isDeluxe",
+        "caller": "juice-shop/routes/deluxe.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/order.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/routes/order.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/order.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "isDeluxe",
+        "caller": "juice-shop/routes/order.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/order.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "discountFromCoupon",
+        "caller": "juice-shop/routes/order.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/coupon.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "discountFromCoupon",
+        "caller": "juice-shop/routes/coupon.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/fileServer.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "verify",
+        "caller": "juice-shop/routes/fileServer.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/fileServer.ts",
+        "target_file": "juice-shop/routes/2fa.ts",
+        "function": "verify",
+        "caller": "juice-shop/routes/fileServer.ts",
+        "callee": "juice-shop/routes/2fa.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/fileServer.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "cutOffPoisonNullByte",
+        "caller": "juice-shop/routes/fileServer.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/checkKeys.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/routes/checkKeys.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/authenticatedUsers.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "decode",
+        "caller": "juice-shop/routes/authenticatedUsers.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/redirect.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/routes/redirect.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/redirect.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectChallenge_1.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/routes/redirect.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/redirect.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_2.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/routes/redirect.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/redirect.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectChallenge_4_correct.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/routes/redirect.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectChallenge_4_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/redirect.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectChallenge_3.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/routes/redirect.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectChallenge_3.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/redirect.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_3_correct.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/routes/redirect.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_3_correct.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/redirect.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_1.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/routes/redirect.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_1.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/redirect.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_4.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/routes/redirect.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectCryptoCurrencyChallenge_4.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/redirect.ts",
+        "target_file": "juice-shop/data/static/codefixes/redirectChallenge_2.ts",
+        "function": "isRedirectAllowed",
+        "caller": "juice-shop/routes/redirect.ts",
+        "callee": "juice-shop/data/static/codefixes/redirectChallenge_2.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/videoHandler.ts",
+        "target_file": "juice-shop/routes/userProfile.ts",
+        "function": "favicon",
+        "caller": "juice-shop/routes/videoHandler.ts",
+        "callee": "juice-shop/routes/userProfile.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/videoHandler.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "extractFilename",
+        "caller": "juice-shop/routes/videoHandler.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/b2bOrder.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "isChallengeEnabled",
+        "caller": "juice-shop/routes/b2bOrder.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/b2bOrder.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/routes/b2bOrder.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/b2bOrder.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/routes/b2bOrder.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/updateUserProfile.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "authorize",
+        "caller": "juice-shop/routes/updateUserProfile.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/repeatNotification.ts",
+        "target_file": "juice-shop/lib/challengeUtils.ts",
+        "function": "findChallengeByName",
+        "caller": "juice-shop/routes/repeatNotification.ts",
+        "callee": "juice-shop/lib/challengeUtils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/vulnCodeSnippet.ts",
+        "target_file": "juice-shop/lib/codingChallenges.ts",
+        "function": "getCodeChallenges",
+        "caller": "juice-shop/routes/vulnCodeSnippet.ts",
+        "callee": "juice-shop/lib/codingChallenges.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/vulnCodeSnippet.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/routes/vulnCodeSnippet.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/vulnCodeSnippet.ts",
+        "target_file": "juice-shop/lib/accuracy.ts",
+        "function": "getFindItAttempts",
+        "caller": "juice-shop/routes/vulnCodeSnippet.ts",
+        "callee": "juice-shop/lib/accuracy.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/vulnCodeSnippet.ts",
+        "target_file": "juice-shop/lib/accuracy.ts",
+        "function": "storeFindItVerdict",
+        "caller": "juice-shop/routes/vulnCodeSnippet.ts",
+        "callee": "juice-shop/lib/accuracy.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/userProfile.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "extractFilename",
+        "caller": "juice-shop/routes/userProfile.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/userProfile.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "isChallengeEnabled",
+        "caller": "juice-shop/routes/userProfile.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/userProfile.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/routes/userProfile.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/userProfile.ts",
+        "target_file": "juice-shop/routes/videoHandler.ts",
+        "function": "favicon",
+        "caller": "juice-shop/routes/userProfile.ts",
+        "callee": "juice-shop/routes/videoHandler.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/showProductReviews.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "isChallengeEnabled",
+        "caller": "juice-shop/routes/showProductReviews.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/metrics.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "version",
+        "caller": "juice-shop/routes/metrics.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/metrics.ts",
+        "target_file": "juice-shop/routes/vulnCodeSnippet.ts",
+        "function": "retrieveChallengesWithCodeSnippet",
+        "caller": "juice-shop/routes/metrics.ts",
+        "callee": "juice-shop/routes/vulnCodeSnippet.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/metrics.ts",
+        "target_file": "juice-shop/lib/antiCheat.ts",
+        "function": "totalCheatScore",
+        "caller": "juice-shop/routes/metrics.ts",
+        "callee": "juice-shop/lib/antiCheat.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/metrics.ts",
+        "target_file": "juice-shop/lib/accuracy.ts",
+        "function": "totalFindItAccuracy",
+        "caller": "juice-shop/routes/metrics.ts",
+        "callee": "juice-shop/lib/accuracy.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/metrics.ts",
+        "target_file": "juice-shop/lib/accuracy.ts",
+        "function": "totalFixItAccuracy",
+        "caller": "juice-shop/routes/metrics.ts",
+        "callee": "juice-shop/lib/accuracy.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/metrics.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "getErrorMessage",
+        "caller": "juice-shop/routes/metrics.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/dataExport.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "hash",
+        "caller": "juice-shop/routes/dataExport.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/delivery.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "isDeluxe",
+        "caller": "juice-shop/routes/delivery.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/restoreProgress.ts",
+        "target_file": "juice-shop/lib/insecurity.ts",
+        "function": "decode",
+        "caller": "juice-shop/routes/restoreProgress.ts",
+        "callee": "juice-shop/lib/insecurity.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/restoreProgress.ts",
+        "target_file": "juice-shop/lib/challengeUtils.ts",
+        "function": "notSolved",
+        "caller": "juice-shop/routes/restoreProgress.ts",
+        "callee": "juice-shop/lib/challengeUtils.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/likeProductReviews.ts",
+        "target_file": "juice-shop/frontend/src/hacking-instructor/helpers/helpers.ts",
+        "function": "sleep",
+        "caller": "juice-shop/routes/likeProductReviews.ts",
+        "callee": "juice-shop/frontend/src/hacking-instructor/helpers/helpers.ts"
+    },
+    {
+        "source_file": "juice-shop/routes/appVersion.ts",
+        "target_file": "juice-shop/lib/utils.ts",
+        "function": "version",
+        "caller": "juice-shop/routes/appVersion.ts",
+        "callee": "juice-shop/lib/utils.ts"
+    }
+]

@@ -1,0 +1,121 @@
+graph TD
+req.body.email --> startTimer
+req.body.email --> startTimer
+startTimer -->|Filesystem Sink (Medium)| readFile
+startTimer --> readFile
+req.body.password --> startTimer
+req.body.password --> startTimer
+req.body.passwordRepeat --> startTimer
+req.body.passwordRepeat --> startTimer
+process.env.NODE_ENV --> startTimer
+process.env.NODE_ENV --> startTimer
+process.env.PORT --> startTimer
+process.env.PORT --> startTimer
+process.env.BASE_PATH --> startTimer
+process.env.BASE_PATH --> startTimer
+process.env.EXIT_ON_READY --> startTimer
+process.env.EXIT_ON_READY --> startTimer
+process.env.SOLUTIONS_WEBHOOK --> stringify
+process.env.SOLUTIONS_WEBHOOK --> stringify
+stringify -->|Network Sink (High)| fetch
+stringify --> fetch
+process.env.NODE_ENV --> stringify
+process.env.NODE_ENV --> stringify
+process.env.PORT --> checkIfRunningOnSupportedNodeVersion
+process.env.PORT --> checkIfRunningOnSupportedNodeVersion
+checkIfRunningOnSupportedNodeVersion -->|Network Sink (High)| fetch
+checkIfRunningOnSupportedNodeVersion --> fetch
+req.body.email --> findOrCreate
+req.body.email --> findOrCreate
+findOrCreate -->|Database Sink (Medium)| query
+findOrCreate --> query
+req.body.password --> findOrCreate
+req.body.password --> findOrCreate
+req.query.q --> WHERE
+req.query.q --> WHERE
+WHERE -->|Database Sink (Medium)| query
+WHERE --> query
+req.body.imageUrl --> match
+req.body.imageUrl --> match
+match -->|Network Sink (High)| fetch
+match --> fetch
+req.cookies.token --> match
+req.cookies.token --> match
+process.env.BASE_PATH --> match
+process.env.BASE_PATH --> match
+req.body.captchaId --> floor
+req.body.captchaId --> floor
+floor -->|Execution Sink (Critical)| eval
+floor --> eval
+req.body.captcha --> floor
+req.body.captcha --> floor
+req.cookies.token --> fromBuffer
+req.cookies.token --> fromBuffer
+fromBuffer -->|Filesystem Sink (High)| writeFile
+fromBuffer --> writeFile
+process.env.BASE_PATH --> fromBuffer
+process.env.BASE_PATH --> fromBuffer
+req.headers.range --> videoPath
+req.headers.range --> videoPath
+videoPath -->|Filesystem Sink (Medium)| readFile
+videoPath --> readFile
+req.body.key --> getCodeChallenges
+req.body.key --> getCodeChallenges
+getCodeChallenges -->|Filesystem Sink (Medium)| readFile
+getCodeChallenges --> readFile
+req.body.selectedLines --> getCodeChallenges
+req.body.selectedLines --> getCodeChallenges
+req.params.challenge --> getCodeChallenges
+req.params.challenge --> getCodeChallenges
+req.cookies.token --> extractFilename
+req.cookies.token --> extractFilename
+extractFilename -->|Filesystem Sink (Medium)| readFile
+extractFilename --> readFile
+extractFilename -->|Execution Sink (Critical)| eval
+extractFilename --> eval
+filePath --> startTimer
+filePath --> startTimer
+By --> querySelector
+By --> querySelector
+querySelector -->|Database Sink (Medium)| query
+querySelector --> query
+style --> Vector3
+style --> Vector3
+Vector3 -->|Execution Sink (Critical)| exec
+Vector3 --> exec
+val --> val
+val --> val
+val -->|Execution Sink (Critical)| eval
+val --> eval
+filename --> filename
+filename --> filename
+filename -->|Filesystem Sink (Medium)| readFile
+filename --> readFile
+product --> product
+product --> product
+product -->|Network Sink (High)| fetch
+product --> fetch
+currPath --> lstat
+currPath --> lstat
+lstat -->|Filesystem Sink (Medium)| readFile
+lstat --> readFile
+lines --> lstat
+lines --> lstat
+lstat -->|Execution Sink (Critical)| exec
+lstat --> exec
+webhook --> stringify
+webhook --> stringify
+file --> load
+file --> load
+load -->|Filesystem Sink (Medium)| readFile
+load --> readFile
+domain --> checkIfRunningOnSupportedNodeVersion
+domain --> checkIfRunningOnSupportedNodeVersion
+url --> match
+url --> match
+expression --> floor
+expression --> floor
+filePath --> fromBuffer
+filePath --> fromBuffer
+code --> extractFilename
+code --> extractFilename

@@ -1,8 +1,53 @@
 import os
 import re
 
+SINK_CLASSES = {
+    "axios.get": {
+        "class": "Network Sink",
+        "risk": "High"
+    },
+    "fetch": {
+        "class": "Network Sink",
+        "risk": "High"
+    },
+    "query": {
+        "class": "Database Sink",
+        "risk": "Medium"
+    },
+    "db.query": {
+        "class": "Database Sink",
+        "risk": "Medium"
+    },
+    "exec": {
+        "class": "Execution Sink",
+        "risk": "Critical"
+    },
+    "spawn": {
+        "class": "Execution Sink",
+        "risk": "Critical"
+    },
+    "readFile": {
+        "class": "Filesystem Sink",
+        "risk": "Medium"
+    },
+    "writeFile": {
+        "class": "Filesystem Sink",
+        "risk": "High"
+    },
+    "eval": {
+        "class": "Execution Sink",
+        "risk": "Critical"
+    },
+    "runInContext": {
+        "class": "Execution Sink",
+        "risk": "Critical"
+    }
+}
+
 SINK_PATTERN = re.compile(
-    r'(axios\.get|exec)\s*\(\s*([A-Za-z_][A-Za-z0-9_]*)'
+    r'\b(axios\.get|fetch|exec|spawn|db\.query|query|readFile|'
+    r'writeFile|eval|runInContext)\s*\(\s*'
+    r'([A-Za-z_][A-Za-z0-9_]*)'
 )
 
 
@@ -59,6 +104,12 @@ def discover_internal_sinks(
 
                         "sink":
                         sink,
+
+                        "sink_class":
+                        SINK_CLASSES[sink]["class"],
+
+                        "risk":
+                        SINK_CLASSES[sink]["risk"],
 
                         "file":
                         path
